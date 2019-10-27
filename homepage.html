@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Umbrella Movies Booking Ticket</title>
+
+
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker%7CSrisakdi&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Searching Bar  -->
+    <div id="search">
+        <p>|<a href="homepage.html">Umbrella Cinema</a>|Search: <input type="text" /></p>
+    </div>
+
+    <!-- Header Banner  -->
+    <div class="transluscent-mat">
+        <header>
+            <div class="header">
+                <div id="bannerimage">
+                    <img id="bannerjpg" src="images/Umbrella.jpg" alt="Umbrella Cinema" />
+                </div>
+                <div id="bannerlogo">
+                    <a class="homelink" href="homepage.html">
+                        <h1>UMBRELLA CINEMA</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="shiftup">
+            <!--Navigation menu-->
+            <nav>
+                <ul class="navigation">
+                    <li class="nav">
+                        <a href="homepage.html" id="currentlink"> Home Page</a>
+                    </li>
+                    <li class="nav">
+                        <a href="showing-now.html">Now Showing</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Movies.html"> All Movies</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Booking.html">Booking a Ticket</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Cinema-Locations.html">Cinema Locations</a>
+                    </li>
+                    <li class="nav">
+                        <a href="About-Us.html">About Us </a>
+                    </li>
+                </ul>
+            </nav>
+
+            </header>
+
+            <div class="TopMovies">
+
+                <h1> Top Movies </h1>
+
+                <video id="video" controls="controls" onended="setTimeout('change_video()',3000)">
+                </video>
+                <!-- <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe> -->
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <h2>Upcoming Movies </h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 10</div>
+                    <img src="images/imagessss.jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 10</div>
+                    <img src="images/images.jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 10</div>
+                    <img src="images/images (5).jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4/ 10</div>
+                    <img src="images/images (4).jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 10</div>
+                    <img src="images/images (3).jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">6/ 10</div>
+                    <img src="images/images (2).jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">7/ 10</div>
+                    <img src="images/images (1).jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">8 / 10</div>
+                    <img src="images/download.jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">9/ 10</div>
+                    <img src="images/download (2).jpg" width="900px" height="600px">
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">10 / 10</div>
+                    <img src="images/download (1).jpg" width="900px" height="600px">
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+<br>
+<br>
+
+            <footer> copyright Umbrella @ 2019 </footer>
+
+            <script src="js/HomePage.js"></script>
+
+</body>
+
+</html>
