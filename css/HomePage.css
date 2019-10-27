@@ -1,0 +1,130 @@
+body {
+
+    background-color: maroon;
+}
+
+
+/* The Header Styling  */
+
+header {
+    background-color: black;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    color: maroon;
+    font: 28px Papyrus, fantasy;
+    min-width: 924px;
+    display: block;
+    min-height: 120px;
+    margin-top: -3px;
+    position: relative;
+    left: -5px;
+ }
+
+ h1 {
+    margin-right: 20px;
+ }
+ #bannerimage {
+    float: left;
+    width: 100px;
+    text-align: right;
+ }
+ #bannerjpg {
+        position: relative;
+        left: 25%;
+        border: groove 2px black;
+ }
+ #bannerimage + div {
+    text-align: right;
+ }
+ #bannerimage img {
+    height: 100px;
+    width: 100px;
+    border: black solid 2px;
+    /* -webkit-transform: rotateY(0deg); Safari */
+    transform: rotateY(0deg);
+    /* -webkit-transition: transform 3s; */
+    transition: transform 3s;
+ }
+ #bannerimage img:hover {
+    /* -webkit-transform: rotateY(360deg); Safari */
+    transform: rotateY(360deg);
+ }
+ #bannerlogo {
+    margin-right: 0;
+ }
+ .homelink {
+    color: maroon;
+    text-shadow: 3px 3px white;
+    text-decoration: none;
+    font-style: italic;
+ }
+ .transluscent-mat {
+    width: 916px;
+    margin: auto;
+    padding-top: 0.1px;
+ }
+
+ #search input:focus {
+    background-color: rgb(151, 151, 145);
+ }
+ div[id="search"] a{
+    color: silver;
+    font-family: Papyrus, fantasy;
+    text-decoration: none;
+ }
+ div[id="search"] form{
+    position: relative;
+    left: -40px;
+    top: -3px;
+ }
+ div p {
+    color: white;
+    font: 14px 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    padding-left: 17px;
+}
+
+
+/* The Navigation Styling  */
+
+.navigation {
+    position: relative;
+    left: -3.9%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    width: 960px;
+    overflow: hidden;
+ }
+ .nav {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    border: 2px black solid;
+    border-radius: 30px;
+    width: 125px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    left: -3.5px;
+    box-shadow: 1px 1px 1px black;
+ }
+
+ #currentlink {
+    pointer-events: none;
+    cursor: default;
+    color: #3399FF;
+ }
+ nav a:link {
+    color: white;
+    text-decoration: none;
+ }
+ nav a:visited {
+    color: white;
+    text-decoration: none;
+ }
+ nav a:hover {
+    color: #3399FF;
+    text-decoration: none;
+    border: 3px solid #3399FF;
+
+ }
