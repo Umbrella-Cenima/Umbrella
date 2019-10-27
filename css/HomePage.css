@@ -1,14 +1,18 @@
-body {
-
-    background-color: maroon;
+body{
+   background-image: url('https://www.quantumblack.com/static/hero-home-66ad0082c5fa59b705aec799685a5a5e-6ded7.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+  
 }
+ 
 
 
 /* The Header Styling  */
 
 header {
     background-color: black;
-    border: 0.5px solid black;
+    border: 0.5px solid rgb(197, 11, 11);
     border-radius: 20px;
     margin-bottom: 50px;
     color: maroon;
@@ -32,7 +36,6 @@ header {
  #bannerjpg {
         position: relative;
         left: 25%;
-        border: groove 2px black;
  }
  #bannerimage + div {
     text-align: right;
@@ -40,7 +43,7 @@ header {
  #bannerimage img {
     height: 100px;
     width: 100px;
-    border: black solid 2px;
+    /* border: rgb(167, 10, 10) solid 2px; */
     /* -webkit-transform: rotateY(0deg); Safari */
     transform: rotateY(0deg);
     /* -webkit-transition: transform 3s; */
@@ -49,6 +52,7 @@ header {
  #bannerimage img:hover {
     /* -webkit-transform: rotateY(360deg); Safari */
     transform: rotateY(360deg);
+    border: hidden;
  }
  #bannerlogo {
     margin-right: 0;
@@ -99,7 +103,7 @@ header {
     display: inline-block;
     color: white;
     background-color: black;
-    border: 2px black solid;
+    border: 2px rgb(156, 11, 11) solid;
     border-radius: 30px;
     width: 125px;
     text-align: center;
@@ -123,9 +127,8 @@ header {
     text-decoration: none;
  }
  nav a:hover {
-    color: #3399FF;
+    color: maroon;
     text-decoration: none;
-    border: 3px solid #3399FF;
  }
 
  .TopMovies  {
@@ -133,10 +136,9 @@ header {
    font-family: 'Srisakdi', cursive;
    color: white;
    font-size: x-large;
-   text-shadow: 5px 5px black;
+   text-shadow: 5px 5px maroon;
  }
 
  #video {
-
    height: 380px;
  }
