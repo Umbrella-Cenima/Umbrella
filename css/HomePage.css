@@ -6,8 +6,6 @@ body{
   
 }
  
-
-
 /* The Header Styling  */
 
 header {
@@ -34,8 +32,8 @@ header {
     text-align: right;
  }
  #bannerjpg {
-        position: relative;
-        left: 25%;
+   position: relative;
+   left: 25%;
  }
  #bannerimage + div {
     text-align: right;
@@ -43,14 +41,10 @@ header {
  #bannerimage img {
     height: 100px;
     width: 100px;
-    /* border: rgb(167, 10, 10) solid 2px; */
-    /* -webkit-transform: rotateY(0deg); Safari */
     transform: rotateY(0deg);
-    /* -webkit-transition: transform 3s; */
     transition: transform 3s;
  }
  #bannerimage img:hover {
-    /* -webkit-transform: rotateY(360deg); Safari */
     transform: rotateY(360deg);
     border: hidden;
  }
@@ -76,6 +70,7 @@ header {
     color: silver;
     font-family: Papyrus, fantasy;
     text-decoration: none;
+
  }
  div[id="search"] form{
     position: relative;
@@ -136,9 +131,75 @@ header {
    font-family: 'Srisakdi', cursive;
    color: white;
    font-size: x-large;
+ }
+
+ .TopMovies h1 {
+
    text-shadow: 5px 5px maroon;
+
  }
 
  #video {
    height: 380px;
  }
+
+
+ /* Images slide show  */
+ /* Slideshow container */
+.slideshow-container {
+   position: relative;
+   margin: auto;
+   text-align: center;
+  }
+
+  /* Number text (1/10 etc) */
+.numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+.dot {
+   height: 15px;
+   width: 15px;
+   margin: 0px 5px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+  }
+
+  .active {
+   background-color: maroon;
+  }
+
+  .fade {
+   animation-name: fade;
+   animation-duration: 1.5s;
+  }
+
+h2{
+   text-align: center;
+   font-family: 'Srisakdi', cursive;
+   color: white;
+   font-size: xx-large;   
+   text-shadow: 5px 5px maroon;
+}
+footer{
+   text-align: center;
+   font-size: x-large;
+   background-color: black;
+   border: 0.5px solid rgb(197, 11, 11);
+   border-radius: 20px;
+   color: white;
+   font: 28px Papyrus, fantasy;
+   display: block;
+   min-height: 50px;
+   padding-top: 10px;
+   position: relative;
+   text-shadow: 3px 3px maroon;
+   left: -5px;
+}
