@@ -3,6 +3,9 @@ body {
     background-color: maroon;
 }
 
+
+/* The Header Styling  */
+
 header {
     background-color: black;
     border: 0.5px solid black;
@@ -59,8 +62,6 @@ header {
  .transluscent-mat {
     width: 916px;
     margin: auto;
-    background-color: #102334;
-    background-color: rgba(16,35,52, 0.4);
     padding-top: 0.1px;
  }
 
@@ -81,5 +82,46 @@ header {
     color: white;
     font: 14px 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     padding-left: 17px;
-        }
- 
+}
+
+
+/* The Navigation Styling  */
+
+.navigation {
+    position: relative;
+    left: -3.9%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    width: 960px;
+    overflow: hidden;
+ }
+ .nav {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    border: 2px black solid;
+    width: 125px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    left: -3.5px;
+    box-shadow: 1px 1px 1px black;
+ }
+
+ #currentlink {
+    pointer-events: none;
+    cursor: default;
+    color: #3399FF;
+ }
+ nav a:link {
+    color: white;
+    text-decoration: none;
+ }
+ nav a:visited {
+    color: white;
+    text-decoration: none;
+ }
+ nav a:hover {
+    color: #3399FF;
+    text-decoration: none;
+ }
