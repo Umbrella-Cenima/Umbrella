@@ -126,5 +126,17 @@ header {
     color: #3399FF;
     text-decoration: none;
     border: 3px solid #3399FF;
+ }
 
+ .TopMovies  {
+   text-align: center;
+   font-family: 'Srisakdi', cursive;
+   color: white;
+   font-size: x-large;
+   text-shadow: 5px 5px black;
+ }
+
+ #video {
+
+   height: 380px;
  }
