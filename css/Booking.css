@@ -245,3 +245,16 @@ input[type=number] {
    text-shadow: 3px 3px maroon;
    left: -5px;
 }
+
+
+/* /////// For LI ///////// */
+
+#Movie-Details {
+
+color: white;   
+}
+
+h3 {
+
+   color: white;
+}
