@@ -71,28 +71,34 @@
                         <!-- legend: to heading some info together  , every single text input -->
                         <legend> The Needed Information To Book A Ticket </legend><br></br>
 
+                        <label>Your Name</label>
+                        <input type="text" name="name" placeholder='Enter Your First Name'>
+                        <br></br><br>
+
                         <!-- label & input : to add the text input for each one  -->
                         <label> Choose The Movie :</label>
-                        <select name="MoviesSelect" size="1">
+                        <select name="moviesSelect" size="1">
+                            <option value="Empty">-------</option>
                             <option value="romantic">Romantic</option>
                             <option value="horror">Horror</option>
                             <option value="comedy">Comedy</option>
                             <option value="action">Action</option>
                             <option value="drama">Drama</option>
 
-                          </select><br></br><br>
+                        </select><br></br><br>
 
-                        <label> Pick Your Favorite Seat Type :  </label>
-                        <select name="SeatKind" size="1">
+                        <label> Pick Your Favorite Seat Type : </label>
+                        <select name="seatKind" size="1">
+                            <option value="Empty">-------</option>
                             <option value="a"> A </option>
                             <option value="b"> B </option>
                             <option value="c"> C </option>
                             <option value="d"> D </option>
                             <option value="f"> F </option>
                             <option value="vip"> VIP </option>
-                          </select><br></br><br>
+                        </select><br></br><br>
 
-                        <label> Choose How many Seats You Want  </label>
+                        <label> Choose How many Seats You Want </label>
                         <input type="number" name="seatsNum" placeholder="Enter Any Number (as maximum 3 ONLY)"
                             style="width:300px"><br></br><br>
                         <!-- <span>list the average by using colon </span> -->
@@ -103,12 +109,20 @@
 
                 <!-- Time Button -->
                 <div class="Time-Button">
-                    <button type="button"
-                    onclick="document.getElementById('demo').innerHTML = Date()">
-                    Click me to display Date and Time.</button>
+                    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+                        Click me to display Date and Time.</button>
 
                     <p id="demo"></p>
                 </div>
+
+
+                <section>
+                    <h3> The Movie Details </h3>
+                    <ul id="Movie-Details">
+
+                    </ul>
+                </section>
+
             </main>
 
 

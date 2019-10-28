@@ -1,53 +1,52 @@
 'Use Strict';
 
+var movieForm = document.getElementById('formArea-Movies');
+var movieD = document.getElementById('Movie-Details');
 
-var newarray = [];
-var rowData1;
-var rowData2;
-var sum = 0;
+
 /////////////////////// Constructor Function for movies  ///////////////
-function Locations(nameoflocation, min, max, avgCookieSale) {
+function MoviesKind(name, moviesSelect, seatKind, seatsNum) {
 
-    this.name = nameoflocation;
-    this.maxCust = max;
-    this.minCust = min;
-    this.avgCookieSale = avgCookieSale;
-    this.totalCookies = 0;
-    this.genArray = [];  // cookies number per hour 
+    this.name = name;
+    this.moviesSelect = moviesSelect;
+    this.seatKind = seatKind;
+    this.seatsNum = seatsNum;
+
+    MoviesKind.moviesList.push(this);
 
 }
 
-var shopF = document.getElementById('formArea-cookies');
+MoviesKind.moviesList = [];
 
-shopF.addEventListener('submit', function (event) {
+addEventListener('submit', function (event) {
 
 
     event.preventDefault();
-    var nameofloc = event.target.nameofloc.value;
-    console.log('name ', nameofloc);
-    var maxCust = parseInt(event.target.maxCust.value);
-    console.log('max ', maxCust);
-    var minCust = parseInt(event.target.minCust.value);
-    console.log('min ', minCust);
-    var avgCookieSale = parseFloat(event.target.avgCookieSale.value);
-    console.log('avg ', avgCookieSale);
-
-    var newLoc = new Locations(nameofloc, minCust, maxCust, avgCookieSale);
-        newLoc.cookiesValues();         // calculate the cookies for the new object 
-        console.log(newLoc);
-        addshop (newLoc);
-        newarray.push(nameofloc);
-        console.log('new locaaaaation' , newarray.length);
-
-        // if (newarray==newarray.length)
-        // {
-
-        // var newLoc1 = new Locations(nameofloc, minCust, maxCust, avgCookieSale);
-        // newLoc1.cookiesValues();         // calculate the cookies for the new object 
-        // console.log(newLoc1);
-        // addshop2 (newLoc1);
-        // }
-
-        
+    var name = event.target.name.value;
+    console.log('name ', name);
+    var moviesSelect = event.target.moviesSelect.value;
+    console.log('moviesSelect ', moviesSelect);
+    var seatKind = event.target.seatKind.value;
+    console.log('SeatKind ', seatKind);
+    var seatsNum = parseInt(event.target.seatsNum.value);
+    console.log('seatsNum ', seatsNum);     
    
 }); // end of event function 
+
+function handleSubmit(event) {
+
+    event.preventDefault();
+    // get all the values from the form
+    var movies = event.target;
+    var name = movies.name.value;
+    var moviesSelect = movies.moviesSelect.value;
+    var seatKind = movies.seatKind.value;
+    var seatsNum = parseInt(movies.seatsNum.value);
+    new MoviesKind(name, moviesSelect, seatKind, seatsNum);
+    console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
+
+    // Update and render 
+  }
+
+  movieForm.addEventListener('submit', handleSubmit);
+//   console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
