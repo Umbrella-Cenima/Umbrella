@@ -141,5 +141,36 @@ body{
     position: relative;
     text-shadow: 3px 3px maroon;
     left: 212px;
-    width: 941px;
+    width: 920px;
  }
+ fieldset{
+   text-align: center;
+   font-size:x-large ;
+   border: 0.5px solid rgb(197, 11, 11);
+   border-radius: 20px;
+   color: lightgrey;
+   font: bolder;
+   font-family: monospace;
+   display: block;
+   position: relative;
+   left: 212px;
+   width: 870px;
+   background-image: url('https://photo2.tinhte.vn/data/attachment-files/2018/04/4282728_oqitDqs.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+ }
+ h2{
+    text-align: center;
+    font-size: x-large;
+    color: darkred;
+    background-color: black;
+    font-family: 'Baloo Bhai', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Rokkitt', serif;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Bree Serif', serif;    
+ }
+ 
