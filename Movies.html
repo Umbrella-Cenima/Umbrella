@@ -5,8 +5,7 @@
     <title>Umbrella Movies Booking Ticket</title>
 
 
-    <link rel="stylesheet" href="css/HomePage.css">
-    <link rel="stylesheet" href= "css/Movies.css">
+    <link rel="stylesheet" href="css/Movies.css">
     <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker%7CSrisakdi&display=swap" rel="stylesheet">
 
@@ -39,13 +38,13 @@
             <nav>
                 <ul class="navigation">
                     <li class="nav">
-                        <a href="homepage.html" id="currentlink"> Home Page</a>
+                        <a href="homepage.html"> Home Page</a>
                     </li>
                     <li class="nav">
                         <a href="showing-now.html">Now Showing</a>
                     </li>
                     <li class="nav">
-                        <a href="Movies.html"> All Movies</a>
+                        <a href="Movies.html" id="currentlink"> All Movies</a>
                     </li>
                     <li class="nav">
                         <a href="Booking.html">Booking a Ticket</a>
@@ -61,58 +60,198 @@
 
             </header>
             <h1 style="text-align: center; font-family: cursive; color: maroon;">........... </h1>
-            <form>
+            <form id="moviesdata">
                 <fieldset>
-                    <legend>Selecting Elements</legend>
+                    <legend>Select Your Favourite Movie</legend>
                     <p>
-                       
+
                         <label>Gender</label>
-                        <select id="myList">
-                                <option value="0">Select</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                               
-    
-                            </select>
+                        <select name="gender" id="myList">
+                            <option value="0">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
 
-                            <label>Age</label>
-                            <select id="myList">
-                                    <option value="0">Select</option>
-                                    <option value="1">18-24</option>
-                                    <option value="2">25-35</option>
-                                    <option value="2">36-45</option>
-                                    <option value="2">>45</option>
 
-                                </select>
+                        </select>
 
-                                <label>Type of Movie</label>
-                                <select id="myList">
-                                    <option value="0">Select</option>
-                                    <option value="romantic">Romantic</option>
-                                    <option value="horror">Horror</option>
-                                    <option value="comedy">Comedy</option>
-                                    <option value="action">Action</option>
-                                    <option value="drama">Drama</option>
-        
-                                </select>
+                        <label>Age</label>
+                        <select name="age" id="myList">
+                            <option value="0">Select</option>
+                            <option value="18-24">18-24</option>
+                            <option value="25-35">25-35</option>
+                            <option value="36-45">36-45</option>
+                            <option value=">45">>45</option>
+
+                        </select>
+
+                        <label>Type of Movie</label>
+                        <select name="moviekind" id="myList">
+                            <option value="0">Select</option>
+                            <option value="romantic">Romantic</option>
+                            <option value="horror">Horror</option>
+                            <option value="comedy">Comedy</option>
+                            <option value="action">Action</option>
+                            <option value="drama">Drama</option>
+
+                        </select>
                     </p>
                     <button id="button" type="submit">Submit</button>
-                    <canvas id="Chart"></canvas>
 
                 </fieldset>
             </form>
+            <canvas id="Chart1"></canvas>
+            <div class="slideshow-containerR">
+                <h2 style="font-family: Papyrus, fantasy;">Romantic Movies</h2>
+
+                <div class="mySlidesR">
+                    <img src="romantic/images1.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesR">
+                    <img src="romantic/2.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesR">
+                    <img src="romantic/3.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesR">
+                    <img src="romantic/4.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesR">
+                    <img src="romantic/5.jpg" width="300px" height="200px">
+                </div>
+
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dotR"></span>
+                <span class="dotR"></span>
+                <span class="dotR"></span>
+                <span class="dotR"></span>
+                <span class="dotR"></span>
+            </div>
+
+            <div class="slideshow-containerH">
+
+                <h2 style="font-family: Papyrus, fantasy;">Horror Movies </h2>
+                <div class="mySlidesH">
+                    <img src="hor/1.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesH">
+                    <img src="hor/2.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesH">
+                    <img src="hor/3.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesH">
+                    <img src="hor/4.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesH">
+                    <img src="hor/5.jpg" width="300px" height="200px">
+                </div>
+
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dotH"></span>
+                <span class="dotH"></span>
+                <span class="dotH"></span>
+                <span class="dotH"></span>
+                <span class="dotH"></span>
+            </div>
+
+            <div class="slideshow-containerC">
+
+                <h2 style="font-family: Papyrus, fantasy;">Comedy Movies </h2>
+                <div class="mySlidesC">
+                    <img src="com/1.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesC">
+                    <img src="com/2.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesC">
+                    <img src="com/3.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesC">
+                    <img src="com/4.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesC">
+                    <img src="com/5.jpg" width="300px" height="200px">
+                </div>
+
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dotC"></span>
+                <span class="dotC"></span>
+                <span class="dotC"></span>
+                <span class="dotC"></span>
+                <span class="dotC"></span>
+            </div>
+
+
+            <div class="slideshow-containerA">
+
+                <h2 style="font-family: Papyrus, fantasy;">Action Movies </h2>
+                <div class="mySlidesA">
+                    <img src="act/1.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesA">
+                    <img src="act/2.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesA">
+                    <img src="act/3.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesA">
+                    <img src="act/4.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesA">
+                    <img src="act/5.jpg" width="300px" height="200px">
+                </div>
+
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dotA"></span>
+                <span class="dotA"></span>
+                <span class="dotA"></span>
+                <span class="dotA"></span>
+                <span class="dotA"></span>
+            </div>
+
+
+            <div class="slideshow-containerD">
+                <h2 style="font-family: Papyrus, fantasy;">Drama Movies </h2>
+                <div class="mySlidesD">
+
+                    <img src="dra/1.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesD">
+                    <img src="dra/2.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesD">
+                    <img src="dra/3.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesD">
+                    <img src="dra/4.jpg" width="300px" height="200px">
+                </div>
+                <div class="mySlidesD">
+                    <img src="dra/5.jpg" width="300px" height="200px">
+                </div>
+
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dotD"></span>
+                <span class="dotD"></span>
+                <span class="dotD"></span>
+                <span class="dotD"></span>
+                <span class="dotD"></span>
+            </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="js/Movies.js"></script>
 
 <canvas id="Chart"></canvas>
-
-<!-- <canvas id="myChart2" width="400" height="400"></canvas>
-<canvas id="myChart3" width="400" height="400"></canvas>
-<canvas id="myChart4" width="400" height="400"></canvas>
-<canvas id="myChart5" width="400" height="400"></canvas> -->
-
 
 
 </html>
