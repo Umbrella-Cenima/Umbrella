@@ -1,5 +1,5 @@
 'use strict';
-var hours = ['5pm',  '6pm', '7pm','8pm','9pm','10pm','11pm'];
+var hours = [  '  6pm  ', '  7pm  ','  8pm','9pm','10pm'];
 
 var contentArea = document.getElementById('content-area');
 var cookietable = document.createElement('table');
@@ -33,7 +33,7 @@ function HeadRo(table) {
     table.appendChild(HeadRo);
     var Header = document.createElement('td');
     HeadRo.appendChild(Header);
-    Header.textContent = ' kk    ';
+    Header.textContent = ' Taj cinema   ';
 
     for (var i = 0; i < tajs.length; i++) {
         var hourS = document.createElement('td');
@@ -48,41 +48,84 @@ HeadRo(cookietable);
  
 var Grands = ['al','so','ty','uu','uup','ft','iik'];
 
-function HeadR(table) {
+function Head(table) {
 
 
-    var HeadRo = document.createElement('tr');
-    table.appendChild(HeadRo);
+    var Head = document.createElement('tr');
+    table.appendChild(Head);
     var Header = document.createElement('td');
-    HeadR.appendChild(Header);
-    Header.textContent = 'iii   ';
+    Head.appendChild(Header);
+    Header.textContent = 'Grand cinema  ';
 
     for (var i = 0; i < Grands.length; i++) {
         var hourS = document.createElement('td');
-        HeadR.appendChild(hourS);
+        Head.appendChild(hourS);
         hourS.textContent = Grands[i];
     }
     var totallocation = document.createElement('td');
-    HeadR.appendChild(totallocation);
+    Head.appendChild(totallocation);
     // totallocation.textContent = 'Daily Location Total';
 }
-HeadR(cookietable);
-var ahmad = ['asdd','soeded','tyeded','uu33','uu3f3fp','f3f3ft','irfrfik'];
-function HeadR(table) {
+Head(cookietable);
+var Primes = ['asdd','soeded','tyeded','uu33','uu3f3fp',];
 
-    var HeadRo = document.createElement('tr');
-    table.appendChild(HeadRo);
+function HeadP(table) {
+
+    var HeadP = document.createElement('tr');
+    table.appendChild(HeadP);
     var Header = document.createElement('td');
-    HeadR.appendChild(Header);
-    Header.textContent = 'aaaaa   ';
+    HeadP.appendChild(Header);
+    Header.textContent = 'Prime cinema  ';
 
-    for (var i = 0; i < ahmad.length; i++) {
+    for (var i = 0; i < Primes.length; i++) {
         var hourS = document.createElement('td');
-        HeadR.appendChild(hourS);
-        hourS.textContent = ahmad[i];
+        HeadP.appendChild(hourS);
+        hourS.textContent = Primes[i];
     }
     var totallocation = document.createElement('td');
-    HeadR.appendChild(totallocation);
+    HeadP.appendChild(totallocation);
     // totallocation.textContent = 'Daily Location Total';
 }
-HeadRo(cookietable);
+HeadP(cookietable);
+
+var citys=['ss','ssd','uu','yyy','uup'];
+
+function HeadPi(table) {
+
+    var HeadPi = document.createElement('tr');
+    table.appendChild(HeadPi);
+    var Header = document.createElement('td');
+    HeadPi.appendChild(Header);
+    Header.textContent = 'City cinema  ';
+
+    for (var i = 0; i < citys.length; i++) {
+        var hourS = document.createElement('td');
+        HeadPi.appendChild(hourS);
+        hourS.textContent = citys[i];
+    }
+    var totallocation = document.createElement('td');
+    HeadPi.appendChild(totallocation);
+    // totallocation.textContent = 'Daily Location Total';
+}
+HeadPi(cookietable);
+
+var abdali =[' iok ','f','kk','kkoi','ytr'];
+
+function HeadPic(table) {
+
+    var HeadPic = document.createElement('tr');
+    table.appendChild(HeadPic);
+    var Header = document.createElement('td');
+    HeadPic.appendChild(Header);
+    Header.textContent = 'Abdali cinema ';
+
+    for (var i = 0; i < abdali.length; i++) {
+        var hourS = document.createElement('td');
+        HeadPic.appendChild(hourS);
+        hourS.textContent = abdali[i];
+    }
+    var totallocation = document.createElement('td');
+    HeadPic.appendChild(totallocation);
+    // totallocation.textContent = 'Daily Location Total';
+}
+HeadPic(cookietable);
