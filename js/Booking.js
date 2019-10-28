@@ -18,20 +18,39 @@ function MoviesKind(name, moviesSelect, seatKind, seatsNum) {
 
 MoviesKind.moviesList = [];
 
-addEventListener('submit', function (event) {
+function updateMovies() {
+    var moviesString = JSON.stringify(MoviesKind.moviesList);
+    localStorage.setItem('movies', moviesString);
+  } // Ending of set function 
 
 
-    event.preventDefault();
-    var name = event.target.name.value;
-    console.log('name ', name);
-    var moviesSelect = event.target.moviesSelect.value;
-    console.log('moviesSelect ', moviesSelect);
-    var seatKind = event.target.seatKind.value;
-    console.log('SeatKind ', seatKind);
-    var seatsNum = parseInt(event.target.seatsNum.value);
-    console.log('seatsNum ', seatsNum);     
-   
-}); // end of event function 
+  function getProducts() {
+    var dataP = localStorage.getItem('movies');
+    //console.log(' dataP' , dataP);
+    var ProductData = JSON.parse(dataP);
+    //console.log('Product data' , ProductData);
+  
+    if (ProductData) {
+      //console.log('ProductData.length' , ProductData.length );
+      //console.log(' products length  2 ' , AllProductsCont.all.length  );
+  
+      for (let i = 0; i < ProductData.length; i++) {
+        var rawProductObject = ProductData[i];
+        var chgProductCtrs = MoviesKind.moviesList[i];
+        
+      }
+      //console.log(' products length  2 ' , AllProductsCont.all.length  );
+  
+    //   renderNewProducts();
+    }else {
+      
+      alert(' nothing here ');
+      // new AllProductsCont('bag', 'img/bag.jpg');
+  
+    }
+    //console.log('local Storage Data', ProductData);
+  } //// Ending Of get Products Function 
+
 
 function handleSubmit(event) {
 
@@ -39,14 +58,24 @@ function handleSubmit(event) {
     // get all the values from the form
     var movies = event.target;
     var name = movies.name.value;
+    console.log('name ', name);
+
     var moviesSelect = movies.moviesSelect.value;
+    console.log('moviesSelect ', moviesSelect);
+
     var seatKind = movies.seatKind.value;
+    console.log('SeatKind ', seatKind);
+
     var seatsNum = parseInt(movies.seatsNum.value);
+    console.log('seatsNum ', seatsNum);     
+
     new MoviesKind(name, moviesSelect, seatKind, seatsNum);
     console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
 
+    updateMovies();
+
     // Update and render 
-  }
+  }// end of event function
 
   movieForm.addEventListener('submit', handleSubmit);
 //   console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);

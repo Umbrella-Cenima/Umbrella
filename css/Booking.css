@@ -109,7 +109,7 @@ body{
   }
  
   #currentlink {
-     pointer-events: none;
+     pointer-events: pointer;
      cursor: default;
      color: #3399FF;
   }
