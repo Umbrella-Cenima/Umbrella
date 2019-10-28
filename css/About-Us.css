@@ -4,10 +4,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
    
- }
-  
- /* The Header Styling  */
- 
+ } 
  header {
      background-color: black;
      border: 0.5px solid rgb(197, 11, 11);
@@ -81,11 +78,7 @@ body{
      color: white;
      font: 14px 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
      padding-left: 17px;
- }
- 
- 
- /* The Navigation Styling  */
- 
+ } 
  .navigation {
      position: relative;
      left: -3.9%;
@@ -173,4 +166,63 @@ body{
     font-family: 'Satisfy', cursive;
     font-family: 'Bree Serif', serif;    
  }
+ section{
+   text-align: center;
+   border: 0.1px solid black;
+   border-radius: 2px;
+   position: relative;
+   left: 212px;
+   width: 870px;
+   background-image: url('https://www.quantumblack.com/static/hero-home-66ad0082c5fa59b705aec799685a5a5e-6ded7.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   color: blanchedalmond;
+ }
+.container {
+    display: inline-block;
+    font-family: Arial;
+    width: 24.5%;
+ }
+
+ .container img {
+    border-radius: 90%;
+ } 
+ .text-block {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: black;
+   color: white;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+#papa{
+   color: darkred;
+   font-size: 30px;
+   font-weight: bolder;
+}
+
+#papa2{
+   color: darkred;
+   font-size: 25px;
+   font-weight: bolder;
+
+
+}
+.container2 img {
+   border-radius: 30%;
+   width: 75px;
+   height: 75px;
+} 
+.container2 {
+   display: inline-block;
+   font-family: Arial;
+   width: 20%;
+
+}
+
+
+
+ 
  
