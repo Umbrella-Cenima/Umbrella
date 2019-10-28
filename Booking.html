@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <title>Booking A Movie Ticket </title>
     <link rel="stylesheet" href="css/Booking.css">
     <!-- <link rel="stylesheet" href="css/HomePage.css"> -->
 
 
 </head>
+
 <body>
-    
+
     <!-- Searching Bar  -->
     <div id="search">
         <p>|<a href="homepage.html">Umbrella Cinema</a>|Search: <input type="text" /></p>
@@ -44,7 +46,7 @@
                         <a href="Movies.html"> All Movies</a>
                     </li>
                     <li class="nav">
-                        <a href="Booking.html"  id="currentlink">Booking a Ticket</a>
+                        <a href="Booking.html" id="currentlink">Booking a Ticket</a>
                     </li>
                     <li class="nav">
                         <a href="Cinema-Locations.html">Cinema Locations</a>
@@ -58,10 +60,42 @@
             </header>
 
 
+            <main>
+
+                <h1> Book a Ticket For Your chosen Movie </h1>
+
+
+                <form id="formArea-Movies">
+                    <!-- fieldset : to group all information in one place as you like to divided your web pages  -->
+                    <fieldset>
+                        <!-- legend: to heading some info together  , every single text input -->
+                        <legend> The Needed Information To Book A Ticket </legend><br></br>
+
+                        <!-- label & input : to add the text input for each one  -->
+                        <label> Choose The Movie :</label>
+                        <input type="text" name="nameofmovie" placeholder="Choose The Movie Name"
+                            style="width:300px"><br></br><br></br>
+                        <label> Pick Your Favorite Seat Type :  </label>
+                        <input type="number" name="seat-Type" placeholder="A,B,C,D,F,VIP"
+                            style="width:300px"><br></br><br></br>
+                        <label> Choose How many Seats You Want  </label>
+                        <input type="number" name="seatsNum" placeholder="Enter Any Number (as maximum 3 ONLY)"
+                            style="width:300px"><br></br><br></br>
+                        <!-- <span>list the average by using colon </span> -->
+
+                    </fieldset>
+
+
+                    <br></br>
+                    <button type="submit"> Click To Add New Shop </button>
+                </form>
+            </main>
+
 
 
             <!-- <footer> copyright Umbrella @ 2019 </footer> -->
-    <script src="js/Booking.js"></script>
+            <script src="js/Booking.js"></script>
 
 </body>
+
 </html>
