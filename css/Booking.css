@@ -132,6 +132,8 @@ body{
     font-family: 'Srisakdi', cursive;
     color: white;
     font-size: xx-large;
+    margin-top: 70px;
+    margin-bottom: 70px;
     text-shadow: 5px 5px maroon;
   }
 
@@ -159,11 +161,10 @@ legend {
    font-style: oblique;
  }
 
- input[type=text] {
+ input[type=text]{
    border: 3px solid rgb(10, 10, 9);
    cursor: pointer;
    padding: 15px;
-   
 }
 
 input[type=number] {
@@ -175,7 +176,7 @@ input[type=number] {
 button {
    border: 3px dotted rgb(226, 171, 226) ;
    padding: 25px;
-   background: #000;
+   background: maroon;
    color: #fff;
    border-radius: 30px;
    font-size: 18px;
@@ -184,9 +185,20 @@ button {
    margin-left: 330px;
    transition: 350ms;
    cursor: pointer;
-   /* text-align: center;    */
+   font-family: Georgia;
+   font-style: oblique;
   }
  
  button:hover {
    background: orchid;
+ }
+
+ /* ////// Movie List ///// */
+
+ select  {
+
+   border: 3px solid rgb(3, 3, 3);
+   cursor: pointer; 
+   padding: 15px;
+   width: 300px;
  }
