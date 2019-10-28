@@ -173,7 +173,7 @@ input[type=number] {
    padding: 15px;
 }
 
-button {
+#formArea-Movies button {
    border: 3px dotted rgb(226, 171, 226) ;
    padding: 25px;
    background: maroon;
@@ -202,3 +202,41 @@ button {
    padding: 15px;
    width: 300px;
  }
+
+ .Time-Button button {
+
+   color: mediumspringgreen;
+   border: 3px solid white ;
+   width: 100%;
+   padding: 10px;
+   background: maroon;
+   color: rgb(13, 218, 139);
+   font-size: larger;
+   font-family: Georgia;
+   font-style: oblique;
+   margin-top: 15px;
+   margin-bottom: 10px;
+ }
+
+ .Time-Button p {
+
+   color: rgb(13, 218, 139);
+   text-align: center;
+   font-weight: bold;
+ }
+
+ footer{
+   text-align: center;
+   font-size: x-large;
+   background-color: black;
+   border: 0.5px solid rgb(197, 11, 11);
+   border-radius: 20px;
+   color: white;
+   font: 28px Papyrus, fantasy;
+   display: block;
+   min-height: 50px;
+   padding-top: 10px;
+   position: relative;
+   text-shadow: 3px 3px maroon;
+   left: -5px;
+}
