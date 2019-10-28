@@ -109,9 +109,7 @@ header {
  }
 
  #currentlink {
-    pointer-events: none;
-    cursor: default;
-    color: #3399FF;
+    cursor: pointer;
  }
  nav a:link {
     color: white;

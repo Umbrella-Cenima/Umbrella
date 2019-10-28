@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Umbrella Movies Booking Ticket</title>
+
+
+    <link rel="stylesheet" href="css/HomePage.css">
+    <link rel="stylesheet" href= "css/Movies.css">
+    <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker%7CSrisakdi&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+
+    <!-- Searching Bar  -->
+    <div id="search">
+        <p>|<a href="homepage.html">Umbrella Cinema</a>|Search: <input type="text" /></p>
+    </div>
+
+    <!-- Header Banner  -->
+    <div class="transluscent-mat">
+        <header>
+            <div class="header">
+                <div id="bannerimage">
+                    <img id="bannerjpg" src="images/Umbrella.jpg" alt="Umbrella Cinema" />
+                </div>
+                <div id="bannerlogo">
+                    <a class="homelink" href="homepage.html">
+                        <h1>UMBRELLA CINEMA</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="shiftup">
+            <!--Navigation menu-->
+            <nav>
+                <ul class="navigation">
+                    <li class="nav">
+                        <a href="homepage.html" id="currentlink"> Home Page</a>
+                    </li>
+                    <li class="nav">
+                        <a href="showing-now.html">Now Showing</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Movies.html"> All Movies</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Booking.html">Booking a Ticket</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Cinema-Locations.html">Cinema Locations</a>
+                    </li>
+                    <li class="nav">
+                        <a href="About-Us.html">About Us </a>
+                    </li>
+                </ul>
+            </nav>
+
+            </header>
+            <h1 style="text-align: center; font-family: cursive; color: maroon;">........... </h1>
+            <form>
+                <fieldset>
+                    <legend>Selecting Elements</legend>
+                    <p>
+                       
+                        <label>Gender</label>
+                        <select id="myList">
+                                <option value="0">Select</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                               
     
+                            </select>
+
+                            <label>Age</label>
+                            <select id="myList">
+                                    <option value="0">Select</option>
+                                    <option value="1">18-24</option>
+                                    <option value="2">25-35</option>
+                                    <option value="2">36-45</option>
+                                    <option value="2">>45</option>
+
+                                </select>
+
+                                <label>Type of Movie</label>
+                                <select id="myList">
+                                    <option value="0">Select</option>
+                                    <option value="romantic">Romantic</option>
+                                    <option value="horror">Horror</option>
+                                    <option value="comedy">Comedy</option>
+                                    <option value="action">Action</option>
+                                    <option value="drama">Drama</option>
+        
+                                </select>
+                    </p>
+                    <button id="button" type="submit">Submit</button>
+
+                </fieldset>
+            </form>
+
 </body>
+<canvas id="Chart"></canvas>
+<script src="js/Movies.js"></script>
+
+<!-- <canvas id="myChart2" width="400" height="400"></canvas>
+<canvas id="myChart3" width="400" height="400"></canvas>
+<canvas id="myChart4" width="400" height="400"></canvas>
+<canvas id="myChart5" width="400" height="400"></canvas> -->
+
+
+
 </html>

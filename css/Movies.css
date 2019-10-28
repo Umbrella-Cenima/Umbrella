@@ -1,0 +1,46 @@
+fieldset{
+    color: rgb(255, 255, 255);
+    border-color: maroon;
+    background-color: black;
+    border-radius: 20px;
+    font-family: cursive;
+   
+    
+
+
+}
+legend{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px rgb(126, 13, 13);
+    font: 23px Papyrus, fantasy;
+    text-align: center;
+}
+p{
+   font-family: cursive;
+}
+label{
+    margin-left: 130px;
+    font-style: bolder;
+    text-decoration: none;
+    font-family: cursive;
+    text-align: center;
+
+    
+}
+#myList{
+    
+    cursor: pointer;
+    font-size: 12px;
+
+    
+}
+#button{
+    cursor: pointer;
+    color: rgb(253, 253, 253);
+    text-align: center;
+    margin-left: 422px;
+    background-color: black;
+    border: outset;
+    border-color: maroon;
+    font: 15px Papyrus, fantasy;
+}
