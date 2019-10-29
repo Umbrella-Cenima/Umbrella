@@ -3,7 +3,6 @@
 var movieForm = document.getElementById('formArea-Movies');
 var movieD = document.getElementById('Movie-Details');
 
-var seatCounter = 0;
 
 newArray = [];   /// To show the user data 
 
@@ -285,6 +284,8 @@ function MoviesNameSeatNum(name,src) {
     this.name = name;
     this.src = src;
     
+    this.seatCounter = 0;
+
     // this.timeDate = '';
 
     MoviesNameSeatNum.moviesNameSeatList.push(this);
@@ -323,40 +324,125 @@ new MoviesNameSeatNum('The Irishman','moviesNameImg/The Irishman.jpg');
 new MoviesNameSeatNum('IT 2','moviesNameImg/IT2.jpg');
 
 
-function updateMoviesNames() {
+MoviesNameSeatNum.container = document.getElementById('movieImage');
+
+
+MoviesNameSeatNum.middleImage = document.getElementById('movie-image');
+MoviesNameSeatNum.middleTitle = document.getElementById('movie-title');
+
+MoviesNameSeatNum.middleObject = null;
+
+// function renderMovieName()
+// {
+
+//     var middleProductImageElement = MoviesNameSeatNum.middleImage;
+
+//     middleProductImageElement.setAttribute('src', MoviesNameSeatNum.middleObject.src);        // Movie Image
+//     middleProductImageElement.setAttribute('alt', MoviesNameSeatNum.middleObject.name);
+
+//     MoviesNameSeatNum.middleTitle.textContent = MoviesNameSeatNum.middleObject.name;
+// }
+
+function updateMovieName() {
+
+    var alloutput = document.getElementById('Movie-sentences');
+  
+    alloutput.innerHTML = '';
+  
+    for (var i = 0; i < MoviesNameSeatNum.moviesNameSeatList.length; i++) {
+      var newProduct = MoviesNameSeatNum.moviesNameSeatList[i];
+      addElement('p', alloutput, newProduct.name + ' had ' + newProduct.seatCounter + ' votes and was shown ' +  ' times');
+    }
+  } // Ending Total Updates product function 
+  
+  
+  
+  function addElement(tag, container, text) {
+  
+    var element = document.createElement(tag);
+    container.appendChild(element);
+    if (text) {
+      element.textContent = text;
+    }
+    return element;
+  
+  } // Ending Add Element  function 
+
+
+function setMoviesNames() {
     var productStr = JSON.stringify(MoviesNameSeatNum.moviesNameSeatList);
     localStorage.setItem('MoviesName', productStr);
   } // Ending Of Updates updateMoviesNames Function
 
-  updateMoviesNames();
-// var selectElement = document.getElementById('movieType1'); 
+  setMoviesNames();
 
-// selectElement.addEventListener('change',
-//     function (event) {
 
-//             document.getElementById('showorhiddenRomantic').style.display = "inline";
-//             event.preventDefault();
-//             // get all the values from the form
-//             var movies = event.target;
-//             console.log('movies : ', movies);
+  function getMovies() {
+    var dataP = localStorage.getItem('MoviesName');
+    //console.log(' dataP' , dataP);
+  
+    var ProductData = JSON.parse(dataP);
+    //console.log('Product data' , ProductData);
+  
+    if (ProductData) {
+      //console.log('ProductData.length' , ProductData.length );
+      //console.log(' products length  2 ' , AllProductsCont.all.length  );
+  
+      for (let i = 0; i < ProductData.length; i++) {
+        var rawProductObject = ProductData[i];
+        var chgProductCtrs = MoviesNameSeatNum.moviesNameSeatList[i];
+        
+        chgProductCtrs.seatCounter = rawProductObject.seatCounter;
+      }  
+    //   renderMovieName();
+        }else {
+      
+      alert(' nothing here ');
+    }
+    //console.log('local Storage Data', ProductData);
+  } //// Ending Of get Products Function
 
-//             var moviesSelect = movies.value;
-//             console.log('moviesSelect ', moviesSelect);
 
-//             if (moviesSelect === 'romantic')
-//             {
-//                 romanticDRop();   
-//             }else if (moviesSelect === 'comedy')
-//             {
-//                 comedyDRop();   
-//             }else if (moviesSelect === 'action')
-//             {
-//                 actionDRop();   
-//             }else if (moviesSelect === 'horror')
-//             {
-//                 dramaDRop();   
-//             }
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var selectElement = document.getElementById('items'); 
+console.log(' selectElement',selectElement );
+
+selectElement.addEventListener('change',
+    function (event) {
+
+            event.preventDefault();
+            // get all the values from the form
+            var movies = event.target;
+            console.log('movies : ', movies);
+
+            var moviesSelect = movies.value;
+            console.log('moviesSelect for movie name ', moviesSelect);
+
+           switch(moviesSelect)
+           {
+            case "" :
+                break;
+
+
+           }
              
-//     },
-//     false
-// );
+    },
+    false
+);
+
+romanticMo = ['ROMANTIC LIST','After', 'Downton Abbey', 'Maleficent', 'Aladdin', 'Judy (II)'];
+//console.log('romanticMo , romanticMo.length : ', romanticMo, romanticMo.length);
+
+horrorMo = ['HORROR LIST','The Exorcist', 'Psycho', 'Halloween', 'The Thing', 'The Fly'];
+//console.log('horrorMo , horrorMo.length : ', horrorMo , horrorMo.length);
+
+comedyMo = ['COMEDY LIST','Death at a Funeral', 'Step Brothers', 'The Hangover', 'Superbad', 'Project X'];
+//console.log('comedyMo , comedyMo.length : ', comedyMo , comedyMo.length);
+
+actionMo = ['ACTION LIST','The Equalizer', 'Logan', 'The Avengers', 'Captain Marvel', 'Black Panther'];
+//console.log('actionMo , actionMo.length : ', actionMo , actionMo.length);
+
+dramaMo = ['DRAMA LIST','Joker', 'Gemini Man', 'The Lion King', 'The Irishman', 'IT 2'];
+// console.log('dramaMo , dramaMo.length : ', dramaMo , dramaMo.length);
