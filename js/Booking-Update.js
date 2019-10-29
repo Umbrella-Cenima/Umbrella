@@ -121,19 +121,19 @@ function handleSubmit(event) {
     newArray.push(moviesSelect);
 
     var seatLoc = movies.seatLoc.value;
-    console.log('seatLoc ', seatLoc);
+    //console.log('seatLoc ', seatLoc);
     newArray.push(seatLoc);
 
     var seatsNum = parseInt(movies.seatsNum.value);
-    console.log('seatsNum ', seatsNum);
+    //console.log('seatsNum ', seatsNum);
     newArray.push(seatsNum);
 
     var payMethod = movies.payMethod.value;
-    console.log('payMethod ', payMethod);
+    //console.log('payMethod ', payMethod);
     newArray.push(payMethod);
 
     new MoviesKind(name, moviesSelect, seatLoc, seatsNum, payMethod);
-    console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
+    //console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
     console.log(' newArray', newArray);
 
     // Update and render 
@@ -164,7 +164,10 @@ function romanticDRop() {
         selectElement.appendChild(theOption);
         theOption.textContent = currentProduct;
         theOption.value = romanticMo[i];
+
+        
     }
+    console.log(' theOption.value ', theOption.value);
 
 } /// Ending of romanticDRop() function
 
@@ -260,9 +263,50 @@ selectElement.addEventListener('change',
                 actionDRop();   
             }else if (moviesSelect === 'horror')
             {
+                horrorDRop();   
+            }else if (moviesSelect === 'drama')
+            {
                 dramaDRop();   
+            }else
+            {
+                alert(' Please choose Movies Type ');
             }
              
     },
     false
 );
+
+
+////////////////////////////////////// Movies Seat Counter /////////////////////////////////////////////////////////////
+
+// var selectElement = document.getElementById('movieType1'); 
+
+// selectElement.addEventListener('change',
+//     function (event) {
+
+//             document.getElementById('showorhiddenRomantic').style.display = "inline";
+//             event.preventDefault();
+//             // get all the values from the form
+//             var movies = event.target;
+//             console.log('movies : ', movies);
+
+//             var moviesSelect = movies.value;
+//             console.log('moviesSelect ', moviesSelect);
+
+//             if (moviesSelect === 'romantic')
+//             {
+//                 romanticDRop();   
+//             }else if (moviesSelect === 'comedy')
+//             {
+//                 comedyDRop();   
+//             }else if (moviesSelect === 'action')
+//             {
+//                 actionDRop();   
+//             }else if (moviesSelect === 'horror')
+//             {
+//                 dramaDRop();   
+//             }
+             
+//     },
+//     false
+// );
