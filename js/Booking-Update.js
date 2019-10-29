@@ -89,11 +89,11 @@ function handleSubmit(event) {
     var movies = event.target;
     var name = movies.name.value;
 
-    console.log('name ', name);
+    //console.log('name ', name);
     newArray.push(name);
 
     var moviesSelect = movies.moviesSelect.value;
-    console.log('moviesSelect ', moviesSelect);
+    //console.log('moviesSelect ', moviesSelect);
 
     if (moviesSelect === "romantic") {
         // alert('romantic');
@@ -277,8 +277,58 @@ selectElement.addEventListener('change',
 );
 
 
-////////////////////////////////////// Movies Seat Counter /////////////////////////////////////////////////////////////
+////////////////////////////////////// User Movie Choice & Seat Counter  /////////////////////////////////////////////////////////////
 
+////////// Constructor Function for movie name ////////
+function MoviesNameSeatNum(name,src) {
+
+    this.name = name;
+    this.src = src;
+    
+    // this.timeDate = '';
+
+    MoviesNameSeatNum.moviesNameSeatList.push(this);
+}
+
+MoviesNameSeatNum.moviesNameSeatList = [];
+
+new MoviesNameSeatNum('After','moviesNameImg/After.jpg');
+new MoviesNameSeatNum('Downton Abbey','moviesNameImg');
+new MoviesNameSeatNum('Maleficent','moviesNameImg');
+new MoviesNameSeatNum('Aladdin','moviesNameImg');
+new MoviesNameSeatNum('Judy (II)','moviesNameImg');
+
+new MoviesNameSeatNum('The Exorcist','moviesNameImg');
+new MoviesNameSeatNum('Psycho','moviesNameImg');
+new MoviesNameSeatNum('Halloween','moviesNameImg');
+new MoviesNameSeatNum('The Thing','moviesNameImg');
+new MoviesNameSeatNum('The Fly','moviesNameImg');
+
+new MoviesNameSeatNum('Death at a Funeral','moviesNameImg');
+new MoviesNameSeatNum('Step Brothers','moviesNameImg');
+new MoviesNameSeatNum('The Hangover','moviesNameImg');
+new MoviesNameSeatNum('Superbad','moviesNameImg');
+new MoviesNameSeatNum('Project X','moviesNameImg');
+
+new MoviesNameSeatNum('The Equalizer','moviesNameImg');
+new MoviesNameSeatNum('Logan','moviesNameImg');
+new MoviesNameSeatNum('The Avengers','moviesNameImg');
+new MoviesNameSeatNum('Captain Marvel','moviesNameImg');
+new MoviesNameSeatNum('Black Panther','moviesNameImg');
+
+new MoviesNameSeatNum('Joker','moviesNameImg');
+new MoviesNameSeatNum('Gemini Man','moviesNameImg');
+new MoviesNameSeatNum('The Lion King','moviesNameImg');
+new MoviesNameSeatNum('The Irishman','moviesNameImg');
+new MoviesNameSeatNum('IT 2','moviesNameImg');
+
+
+function updateMoviesNames() {
+    var productStr = JSON.stringify(MoviesNameSeatNum.moviesNameSeatList);
+    localStorage.setItem('MoviesName', productStr);
+  } // Ending Of Updates updateMoviesNames Function
+
+  updateMoviesNames();
 // var selectElement = document.getElementById('movieType1'); 
 
 // selectElement.addEventListener('change',

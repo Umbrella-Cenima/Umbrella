@@ -286,8 +286,17 @@ h3 {
    color: white;
 }
 
-
+/* Do Not touch this ID  */
 #showorhiddenRomantic {
 
   display: none;
+}
+
+
+#movieImage {
+
+  color: white;
+  font-size: x-large;
+  text-align: center;
+  margin-top: 50px;
 }
