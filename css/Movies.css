@@ -6,6 +6,7 @@ fieldset{
  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 200px;
 
    
     
@@ -38,8 +39,6 @@ label{
     background-color: black;
     color: white;
     width: 120px;
-    /* margin-left:-50px; */
-
 
     
 }
@@ -54,6 +53,9 @@ label{
     font: 15px Papyrus, fantasy;
     font-display: bold;
     width: 150px;
+    position: absolute;
+    top: 560px;
+    right: 550px;
 }
 .slideshow-containerR {
     position: relative;
@@ -267,21 +269,7 @@ h2{
   font-size: xx-large;
   text-shadow: 5px 5px maroon;
 }
-footer{
-  text-align: center;
-  font-size: x-large;
-  background-color: black;
-  border: 0.5px solid rgb(197, 11, 11);
-  border-radius: 20px;
-  color: white;
-  font: 28px Papyrus, fantasy;
-  display: block;
-  min-height: 50px;
-  padding-top: 10px;
-  position: relative;
-  text-shadow: 3px 3px maroon;
-  left: -5px;
-}
+
 
 #com{
     margin-left: 370px;
@@ -326,3 +314,46 @@ footer{
     font-size: 16px; 
     font-family: cursive;
 }
+.navigation2 {
+    position: relative;
+    left: -3.9%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    width: 960px;
+    overflow: hidden;
+ }
+ .nav2 {
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+
+    width: 135px;
+    /* text-align: center; */
+    /* padding: 10px; */
+    position: relative;
+    right: -100px;
+ }
+
+ footer{
+    text-align: center;
+    font-size: x-large;
+    background-color: black;
+    border: 0.5px solid rgb(197, 11, 11);
+    border-radius: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;;
+    display: block;
+    min-height: 50px;
+    padding-top: 10px;
+    position: relative;
+    text-shadow: 3px 3px maroon;
+    /* left: -5px; */
+    width: 1300px;
+    position: absolute;
+      top: 2810px;
+      right: -60px;
+      margin-left: 500px;
+  
+  }
+
+  

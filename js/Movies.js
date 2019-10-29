@@ -18,49 +18,79 @@ function handleSubmit(event) {
     var movies = event.target;
 
     var gender = movies.gender.value;
-    console.log('gender ', gender);
+    // console.log('gender ', gender);
   
     var age = movies.age.value;
-    console.log('age ', age);
+    // console.log('age ', age);
 
     var moviekind = movies.moviekind.value;
-    console.log('moviekind ', moviekind);
+    // console.log('moviekind ', moviekind);
 
 
     new MoviesTypes(gender, age, moviekind);
-    console.log('MoviesTypes.popular : ', MoviesTypes.popular);
+    // console.log('MoviesTypes.popular : ', MoviesTypes.popular);
     // Update and render
 
     if (moviekind === "romantic")
     {
         romantic();
+        setMoviesTypes();
+
     }
     else if (moviekind === "horror")
     {
         horror();
+        setMoviesTypes();
+
     }
     else if (moviekind === "comedy")
     {
         comedy();
+        setMoviesTypes();
+
     }
     else if (moviekind === "action")
     {
         action();
+        setMoviesTypes();
+
     }
     else if (moviekind === "drama")
     {
         drama();
+        setMoviesTypes();
+
     }
     else  
     {
         alert ('Please Select Movie Type ');
+        
+        setMoviesTypes();
     }
   }
   data.addEventListener('submit', handleSubmit);
 
 
+///////////////////
+//local storage
 
+  function getMoviesTypes() {
+    var data = localStorage.getItem('movie');
+    console.log("dss", data);
 
+    var MoviesTypesData = JSON.parse(data);
+    
+      MoviesTypes.all = MoviesTypesData;
+     
+  
+  }
+  function setMoviesTypes() {
+    var MoviesTypesString = JSON.stringify(MoviesTypes.all);
+    localStorage.setItem('movie', MoviesTypesString);
+  }
+
+////////////////////////////
+//charts
 function romantic(){
 
 var ctx = document.getElementById('Chart1').getContext('2d');
@@ -87,7 +117,7 @@ var myChart1 = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: .5
         }]
     },
     options: {
@@ -101,7 +131,7 @@ var myChart1 = new Chart(ctx, {
     }
 });
 
-romanticRender();
+
 }
 
 
@@ -276,6 +306,11 @@ var myChart5 = new Chart(ctx, {
     }
 });
 }
+getMoviesTypes();
+
+////////////////////////
+//5slides show
+
 
 
 var slideIndex = 0;
@@ -295,7 +330,7 @@ function showSlidesR() {
  }
  slides[slideIndex-1].style.display = "block";
  dots[slideIndex-1].className += " active";
- setTimeout(showSlidesR, 2000); // Change image every 2 seconds
+ setTimeout(showSlidesR, 2000); // Change image every 1 seconds
 }
 
 
@@ -316,7 +351,7 @@ function showSlidesH() {
  }
  slides[slideIndex-1].style.display = "block";
  dots[slideIndex-1].className += " active";
- setTimeout(showSlidesH, 4000); // Change image every 2 seconds
+ setTimeout(showSlidesH, 2500); // Change image every 1.15 seconds
 }
 
 
@@ -337,7 +372,7 @@ function showSlidesC() {
  }
  slides[slideIndex-1].style.display = "block";
  dots[slideIndex-1].className += " active";
- setTimeout(showSlidesC, 4000); // Change image every 2 seconds
+ setTimeout(showSlidesC, 3000); // Change image every 1.30 seconds
 }
 
 
@@ -359,7 +394,7 @@ function showSlidesA() {
  }
  slides[slideIndex-1].style.display = "block";
  dots[slideIndex-1].className += " active";
- setTimeout(showSlidesA, 4000); // Change image every 2 seconds
+ setTimeout(showSlidesA, 3500); // Change image every 1.45 seconds
 }
 
 
