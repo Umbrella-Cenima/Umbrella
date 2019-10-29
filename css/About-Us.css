@@ -7,7 +7,7 @@ body{
  } 
  header {
      background-color: black;
-     border: 0.5px solid rgb(197, 11, 11);
+     border: 0.5px solid maroon;
      border-radius: 20px;
      margin-bottom: 50px;
      color: maroon;
@@ -22,6 +22,7 @@ body{
  
   h1 {
      margin-right: 20px;
+     
   }
   #bannerimage {
      float: left;
@@ -49,8 +50,8 @@ body{
      margin-right: 0;
   }
   .homelink {
-     color: maroon;
-     text-shadow: 3px 3px white;
+     color: rgb(255, 255, 255);
+     text-shadow: 3px 3px rgb(112, 5, 5);
      text-decoration: none;
      font-style: italic;
   }
@@ -91,7 +92,7 @@ body{
      display: inline-block;
      color: white;
      background-color: black;
-     border: 2px rgb(156, 11, 11) solid;
+     border: 2px maroon solid;
      border-radius: 30px;
      width: 125px;
      text-align: center;
@@ -124,7 +125,7 @@ body{
     text-align: center;
     font-size: x-large;
     background-color: black;
-    border: 0.5px solid rgb(197, 11, 11);
+    border: 0.5px solid maroon;
     border-radius: 20px;
     color: white;
     font: 28px Papyrus, fantasy;
@@ -138,8 +139,10 @@ body{
  }
  fieldset{
    text-align: center;
+   font: 28px Papyrus, fantasy;
+
    font-size:x-large ;
-   border: 0.5px solid rgb(197, 11, 11);
+   border: 0.5px solid rgb(255, 255, 255);
    border-radius: 20px;
    color: lightgrey;
    font: bolder;
@@ -156,15 +159,11 @@ body{
  h2{
     text-align: center;
     font-size: x-large;
-    color: darkred;
-    background-color: black;
-    font-family: 'Baloo Bhai', cursive;
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Lobster', cursive;
-    font-family: 'Permanent Marker', cursive;
-    font-family: 'Rokkitt', serif;
-    font-family: 'Satisfy', cursive;
-    font-family: 'Bree Serif', serif;    
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(39, 37, 37); */
+    text-shadow:3PX 3px maroon;
+    font-family: cursive;
+       
  }
  section{
    text-align: center;
@@ -198,15 +197,24 @@ body{
    padding-right: 20px;
  }
 #papa{
-   color: darkred;
-   font-size: 30px;
+   color: rgb(255, 255, 255);
+   font-size: 24px;
    font-weight: bolder;
+   font: Papyrus, fantasy;
+   text-shadow: 3px 3px maroon;
+
+}
+#mama{
+   font-family: 'ZCOOL XiaoWei', serif;
 }
 
 #papa2{
-   color: darkred;
-   font-size: 25px;
+   color: rgb(255, 255, 255);
+   font-size: 16px;
    font-weight: bolder;
+   font: Papyrus, fantasy;
+   text-shadow: 3px 3px maroon;
+
 
 
 }
@@ -217,8 +225,17 @@ body{
 } 
 .container2 {
    display: inline-block;
-   font-family: Arial;
+   font:  Papyrus, fantasy;
    width: 20%;
+
+}
+#blu{
+   color: darkcyan;
+   font-weight: bolder;
+}
+#tag{
+   color: darkcyan;
+   font-weight: bolder;
 
 }
 
