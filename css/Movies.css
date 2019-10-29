@@ -19,13 +19,13 @@ legend{
     text-align: center;
 }
 p{
-   font-family: cursive;
+   font-family: Papyrus, fantasy;
 }
 label{
-    margin-left: 130px;
+    margin-left: 80px;
     font-style: bolder;
     text-decoration: none;
-    font-family: cursive;
+    font-family:Papyrus, fantasy;
     text-align: center;
 
     
@@ -33,23 +33,31 @@ label{
 #myList{
     
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
+    font-family:Papyrus, fantasy;
+    background-color: black;
+    color: white;
+    width: 120px;
+    /* margin-left:-50px; */
+
 
     
 }
 #button{
     cursor: pointer;
-    color: rgb(253, 253, 253);
+    color: rgb(189, 35, 35);
     text-align: center;
-    margin-left: 422px;
+    margin-left: 370px;
     background-color: black;
     border: outset;
-    border-color: maroon;
+    border-color: rgb(255, 255, 255);
     font: 15px Papyrus, fantasy;
+    font-display: bold;
+    width: 150px;
 }
 .slideshow-containerR {
     position: relative;
-    margin-left: -100px;
+    margin-left: -80px;
     text-align: center;
     width: 360px;
     border-color: maroon;
@@ -58,7 +66,7 @@ label{
     position: relative;
     margin: left;
     text-align: center;
-    margin-left: 210px;
+    margin-left: 670px;
     width: 360px;
  
    }
@@ -67,7 +75,7 @@ label{
     margin: right;
     text-align: center;
     width: 360px;
-    margin-left: 517px;
+    margin-left: -80px;
 
  
    }
@@ -76,7 +84,7 @@ label{
     margin: auto;
     width: 360px;
     text-align: center;
-    margin-left: 210px;
+    margin-left: 670px;
 
    }
 
@@ -87,7 +95,7 @@ label{
  margin: auto;
  width: 360px;
  text-align: center;
- margin-left: -100px;
+ margin-left: -80px;
 
 }
    body{
@@ -102,7 +110,8 @@ header {
    border: 0.5px solid rgb(197, 11, 11);
    border-radius: 20px;
    margin-bottom: 50px;
-   color: maroon;
+   color: rgb(255, 255, 255);
+   text-shadow: 4px 4px maroon;
    font: 28px Papyrus, fantasy;
    min-width: 924px;
    display: block;
@@ -140,8 +149,8 @@ h1 {
    margin-right: 0;
 }
 .homelink {
-   color: maroon;
-   text-shadow: 3px 3px white;
+   color: rgb(255, 255, 255);
+   text-shadow: 3px 3px maroon;
    text-decoration: none;
    font-style: italic;
 }
@@ -216,9 +225,9 @@ nav a:hover {
 .TopMovies h1 {
   text-shadow: 5px 5px maroon;
 }
-#video {
+/* #video {
   height: 380px;
-}
+} */
 /* Images slide show  */
 /* Slideshow container */
 .slideshow-container {
@@ -227,13 +236,13 @@ nav a:hover {
   text-align: center;
  }
  /* Number text (1/10 etc) */
-.numbertext {
+/* .numbertext {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
- }
+ } */
  /* The dots/bullets/indicators */
 .dot {
   height: 15px;
@@ -274,6 +283,46 @@ footer{
   left: -5px;
 }
 
-#bayan{
-    margin-left: 500px;
+#com{
+    margin-left: 370px;
+    position: absolute;
+    top: 110px;
+    right: -320px;
+    width: 320px; 
+    font-size: 16px; 
+    font-family: cursive;
+}
+
+#rom{
+    position: absolute;
+    top: 110px;
+    right: -320px;
+    width: 320px; 
+    font-size: 16px; 
+    font-family: cursive;
+}
+#hor{
+    position: absolute;
+    top: 110px;
+    right: 420px;
+    width: 320px; 
+    font-size: 16px; 
+    font-family: cursive;
+}
+ 
+#act{
+    position: absolute;
+    top: 110px;
+    right: 420px;
+    width: 320px; 
+    font-size: 16px; 
+    font-family: cursive;
+}
+#dra{
+    position: absolute;
+    top: 110px;
+    right: -320px;
+    width: 320px; 
+    font-size: 16px; 
+    font-family: cursive;
 }

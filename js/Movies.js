@@ -69,7 +69,7 @@ var myChart1 = new Chart(ctx, {
     data: {
         labels: [' After', 'Downton Abbey', 'Maleficent ', 'Aladdin (I) ', 'Judy (II) '],
         datasets: [{
-            label: 'Most Popular',
+            label: 'Most Popular - Romantic Movies',
             data: [33242, 19501, 13524, 25256, 22745, 17456],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -114,7 +114,7 @@ var myChart2 = new Chart(ctx, {
     data: {
         labels: ['The Exorcist', 'Psycho ', 'Halloween', 'The Thing', 'The Fly'],
         datasets: [{
-            label: 'Most Popaler',
+            label: 'Most Popaler - Horror Movies',
             data: [23542, 24519, 33021, 15254, 12252, 17454],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -157,7 +157,7 @@ var myChart3 = new Chart(ctx, {
     data: {
         labels: ['Death at a Funeral', 'Step Brothers ', 'The Hangover', 'Superbad', 'Project X'],
         datasets: [{
-            label: 'Most Popaler',
+            label: 'Most Popaler - Comedy Movies',
             data: [12012, 19013, 13025, 15255, 12012, 22010],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -199,7 +199,7 @@ var myChart4 = new Chart(ctx, {
     data: {
         labels: ['The Equalizer ', 'Logan', 'The Avengers ', 'Captain Marvel', 'Black Panther'],
         datasets: [{
-            label: 'Most Popaler',
+            label: 'Most Popaler - Action Movies',
             data: [12122, 19015, 12423, 5545, 18542, 19543],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -243,7 +243,7 @@ var myChart5 = new Chart(ctx, {
     data: {
         labels: [' Joker', 'Gemini Man', 'The Lion King ', 'The Irishman', 'It Chapter Two'],
         datasets: [{
-            label: 'Most Popaler',
+            label: 'Most Popaler - Drama',
             data: [12000, 11964, 9035, 8457, 10012],
     
             backgroundColor: [
