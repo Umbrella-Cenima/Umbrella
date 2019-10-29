@@ -287,4 +287,7 @@ h3 {
 }
 
 
-/* //////// Cinema Seats //////// */
+#showorhidden {
+
+  display: none;
+}
