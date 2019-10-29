@@ -240,7 +240,7 @@ h2{
    font-size: xx-large;   
    text-shadow: 5px 5px maroon;
 }
-footer{
+/* footer{
    text-align: center;
    font-size: x-large;
    background-color: black;
@@ -254,8 +254,76 @@ footer{
    position: relative;
    text-shadow: 3px 3px maroon;
    left: -5px;
+} */
+legend{
+   color: blanchedalmond;
+   text-shadow: 3px 3px maroon;
+   text-align: center;
+   font-size: x-large;
+   font-family: cursive;
 }
- 
+fieldset{
+   color: antiquewhite;
+   border-color: black;
+   background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm21-board-jj-112-c.jpg?auto=format&bg=F4F4F3&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-1.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1200&s=9f7c86bf8834d629085c6205dacd9565');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+}
+#myText{
+   margin-left: 190px;
+   text-align: center;
+   height: 50px;
+}
+button{
+   margin-left: 420px;
+}
+ #x{
+    margin-left: 450px;
+
+ }
+ .navigation2 {
+   position: relative;
+   left: -3.9%;
+   margin-top: -5px;
+   margin-bottom: 10px;
+   width: 960px;
+   overflow: hidden;
+}
+.nav2 {
+   display: inline-block;
+   color: white;
+   font-size: 15px;
+   width: 125px;
+   /* text-align: center; */
+   /* padding: 10px; */
+   position: relative;
+   right: -100px;
+   text-align: center;
+}#ah{
+   text-align: center;
+   font-size: 18px;
+}
+footer{
+   text-align: center;
+   font-size: 15px;
+   background-color: black;
+   border: 1px solid rgb(197, 11, 11);
+   border-radius: 20px;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;;
+   display: block;
+   min-height: 50px;
+   padding-top: 10px;
+   position: relative;
+   /* left: -5px; */
+   width: 1800px;
+   position: absolute;
+     top: 1110px;
+     right: -100px;
+     /* margin-left: 500px; */
+     text-align: center;
+ }
  
  
  
