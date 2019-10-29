@@ -293,34 +293,34 @@ function MoviesNameSeatNum(name,src) {
 MoviesNameSeatNum.moviesNameSeatList = [];
 
 new MoviesNameSeatNum('After','moviesNameImg/After.jpg');
-new MoviesNameSeatNum('Downton Abbey','moviesNameImg');
-new MoviesNameSeatNum('Maleficent','moviesNameImg');
-new MoviesNameSeatNum('Aladdin','moviesNameImg');
-new MoviesNameSeatNum('Judy (II)','moviesNameImg');
+new MoviesNameSeatNum('Downton Abbey','moviesNameImg/Downton Abbey.jpg');
+new MoviesNameSeatNum('Maleficent','moviesNameImg/Maleficent.jpg');
+new MoviesNameSeatNum('Aladdin','moviesNameImg/Aladdin.jpg');
+new MoviesNameSeatNum('Judy (II)','moviesNameImg/Judy.jpg');
 
-new MoviesNameSeatNum('The Exorcist','moviesNameImg');
-new MoviesNameSeatNum('Psycho','moviesNameImg');
-new MoviesNameSeatNum('Halloween','moviesNameImg');
-new MoviesNameSeatNum('The Thing','moviesNameImg');
-new MoviesNameSeatNum('The Fly','moviesNameImg');
+new MoviesNameSeatNum('The Exorcist','moviesNameImg/The Exorcist.jpg');
+new MoviesNameSeatNum('Psycho','moviesNameImg/Psycho.jpg');
+new MoviesNameSeatNum('Halloween','moviesNameImg/Halloween.jpg');
+new MoviesNameSeatNum('The Thing','moviesNameImg/The Thing.png');
+new MoviesNameSeatNum('The Fly','moviesNameImg/The Fly.jpg');
 
-new MoviesNameSeatNum('Death at a Funeral','moviesNameImg');
-new MoviesNameSeatNum('Step Brothers','moviesNameImg');
-new MoviesNameSeatNum('The Hangover','moviesNameImg');
-new MoviesNameSeatNum('Superbad','moviesNameImg');
-new MoviesNameSeatNum('Project X','moviesNameImg');
+new MoviesNameSeatNum('Death at a Funeral','moviesNameImg/Death at a Funeral.jpg');
+new MoviesNameSeatNum('Step Brothers','moviesNameImg/Step Brothers.jpg');
+new MoviesNameSeatNum('The Hangover','moviesNameImg/The Hangover.jpg');
+new MoviesNameSeatNum('Superbad','moviesNameImg/Superbad.jpg');
+new MoviesNameSeatNum('Project X','moviesNameImg/Project X.jpg');
 
-new MoviesNameSeatNum('The Equalizer','moviesNameImg');
-new MoviesNameSeatNum('Logan','moviesNameImg');
-new MoviesNameSeatNum('The Avengers','moviesNameImg');
-new MoviesNameSeatNum('Captain Marvel','moviesNameImg');
-new MoviesNameSeatNum('Black Panther','moviesNameImg');
+new MoviesNameSeatNum('The Equalizer','moviesNameImg/The Equalizer.jpg');
+new MoviesNameSeatNum('Logan','moviesNameImg/Logan.jpg');
+new MoviesNameSeatNum('The Avengers','moviesNameImg/The Avengers.jpg');
+new MoviesNameSeatNum('Captain Marvel','moviesNameImg/Captain Marvel.jpg');
+new MoviesNameSeatNum('Black Panther','moviesNameImg/Black Panther.jpg');
 
-new MoviesNameSeatNum('Joker','moviesNameImg');
-new MoviesNameSeatNum('Gemini Man','moviesNameImg');
-new MoviesNameSeatNum('The Lion King','moviesNameImg');
-new MoviesNameSeatNum('The Irishman','moviesNameImg');
-new MoviesNameSeatNum('IT 2','moviesNameImg');
+new MoviesNameSeatNum('Joker','moviesNameImg/Joker.jpg');
+new MoviesNameSeatNum('Gemini Man','moviesNameImg/Gemini Man.jpg');
+new MoviesNameSeatNum('The Lion King','moviesNameImg/The Lion King.jpg');
+new MoviesNameSeatNum('The Irishman','moviesNameImg/The Irishman.jpg');
+new MoviesNameSeatNum('IT 2','moviesNameImg/IT2.jpg');
 
 
 function updateMoviesNames() {
