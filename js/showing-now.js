@@ -1,9 +1,14 @@
 'use strict';
-var hours = [ '  4pm  ', '  6pm  ','  8pm  ','  10pm ',' 12pm'];
+var hours = [ '  4 pm  ', '  6 pm  ','  8 pm  ','  10 pm ',' 12 pm'];
+var tajs = ['After' ,'The Exorcist' , 'Death at a Funeral' , 'The Equalizer' , 'Joker'];
+var Grands = [ 'Downton Abbey' , 'Psycho'  , 'Step Brothers', 'The Avengers','Gemini Man'];
+var Primes = ['Maleficent'  ,'Halloween'  ,'The Hangover' , 'Captain Marvel' , 'The Lion King'];
+var citys=['Logan', 'The Irishman' , 'Aladdin' , 'The Thing' , 'Superbad'];
+var abdali =['Black Panther' , 'It Chapter Two',' Judy (II)', 'The Fly' ,' Project X'];
 
 var contentArea = document.getElementById('content-area');
-var cookietable = document.createElement('table');
-contentArea.appendChild(cookietable);
+var umbrella = document.createElement('table');
+contentArea.appendChild(umbrella);
 
 function HeadRow(table) {
 
@@ -11,20 +16,18 @@ function HeadRow(table) {
     table.appendChild(HeadRow);
     var Header = document.createElement('th');
     HeadRow.appendChild(Header);
-    Header.textContent = '    ';
+    Header.textContent = ' cinema/hours   ';
 
     for (var i = 0; i < hours.length; i++) {
         var hourS = document.createElement('th');
         HeadRow.appendChild(hourS);
         hourS.textContent = hours[i];
     }
-    var totallocation = document.createElement('th');
-    HeadRow.appendChild(totallocation);
-    // totallocation.textContent = 'Daily Location Total';
+    
 }
-HeadRow(cookietable);
+HeadRow(umbrella);
 
-var tajs = ['After' ,'The Exorcist' , 'Death at a Funeral' , 'The Equalizer' , 'Joker'];
+///////////////////////2//////////////////////
 
 function HeadRo(table) {
 
@@ -40,13 +43,11 @@ function HeadRo(table) {
         HeadRo.appendChild(hourS);
         hourS.textContent = tajs[i];
     }
-    var totallocation = document.createElement('td');
-    HeadRo.appendChild(totallocation);
-    // totallocation.textContent = 'Daily Location Total';
+    
 }
-HeadRo(cookietable);
+HeadRo(umbrella);
  
-var Grands = [ 'Downton Abbey' , 'Psycho'  , 'Step Brothers', 'The Avengers','Gemini Man'];
+////////////////////////////// 3 ////////////////////////////
 
 function Head(table) {
 
@@ -62,12 +63,9 @@ function Head(table) {
         Head.appendChild(hourS);
         hourS.textContent = Grands[i];
     }
-    var totallocation = document.createElement('td');
-    Head.appendChild(totallocation);
-    // totallocation.textContent = 'Daily Location Total';
 }
-Head(cookietable);
-var Primes = ['Maleficent'  ,'Halloween'  ,'The Hangover' , 'Captain Marvel' , 'The Lion King'];
+Head(umbrella);
+//////////////////////////// 4///////////////////////////////////
 
 function HeadP(table) {
 
@@ -82,13 +80,11 @@ function HeadP(table) {
         HeadP.appendChild(hourS);
         hourS.textContent = Primes[i];
     }
-    var totallocation = document.createElement('td');
-    HeadP.appendChild(totallocation);
-    // totallocation.textContent = 'Daily Location Total';
+    
 }
-HeadP(cookietable);
+HeadP(umbrella);
 
-var citys=['Logan', 'The Irishman' , 'Aladdin' , 'The Thing' , 'Superbad'];
+//////////////////////////5/////////////////////////
 
 function HeadPi(table) {
 
@@ -103,13 +99,11 @@ function HeadPi(table) {
         HeadPi.appendChild(hourS);
         hourS.textContent = citys[i];
     }
-    var totallocation = document.createElement('td');
-    HeadPi.appendChild(totallocation);
-    // totallocation.textContent = 'Daily Location Total';
+    
 }
-HeadPi(cookietable);
+HeadPi(umbrella);
 
-var abdali =['Black Panther' , 'It Chapter Two',' Judy (II)', 'The Fly' ,' Project X'];
+///////////////////////////// 6 ////////////////////////////
 
 function HeadPic(table) {
 
@@ -124,8 +118,6 @@ function HeadPic(table) {
         HeadPic.appendChild(hourS);
         hourS.textContent = abdali[i];
     }
-    var totallocation = document.createElement('td');
-    HeadPic.appendChild(totallocation);
-    // totallocation.textContent = 'Daily Location Total';
 }
-HeadPic(cookietable);
+HeadPic(umbrella);
+////////////////// 

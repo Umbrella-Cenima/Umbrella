@@ -1,23 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title> ok</title>
+    <title>Umbrella Movies Booking Ticket</title>
+
+
+    <link rel="stylesheet" href="css/showing-now.css">
+    <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker%7CSrisakdi&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <h1>
-            movie show time
-        </h1>
-    </header>
-        <marquee direction="right">Showing Now </marquee>
-        <div id="content-area">
+
+    <!-- Searching Bar  -->
+    <div id="search">
+        <p>|<a href="homepage.html">Umbrella Cinema</a>|Search: <input type="text" /></p>
+    </div>
+
+    <!-- Header Banner  -->
+    <div class="transluscent-mat">
+        <header>
+            <div class="header">
+                <div id="bannerimage">
+                    <img id="bannerjpg" src="images/Umbrella.jpg" alt="Umbrella Cinema" />
+                </div>
+                <div id="bannerlogo">
+                    <a class="homelink" href="homepage.html">
+                        <h1>UMBRELLA CINEMA</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="shiftup">
+            <!--Navigation menu-->
+            <nav>
+                <ul class="navigation">
+                    <li class="nav">
+                        <a href="homepage.html"> Home Page</a>
+                    </li>
+                    <li class="nav">
+                        <a href="showing-now.html" id="currentlink">Now Showing</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Movies.html"> All Movies</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Booking.html">Booking a Ticket</a>
+                    </li>
+                    <li class="nav">
+                        <a href="Cinema-Locations.html">Cinema Locations</a>
+                    </li>
+                    <li class="nav">
+                        <a href="About-Us.html">About Us </a>
+                    </li>
+                </ul>
+            </nav>
+
+            </header>
+            <!-- just for style -->
+            <br>
+            <hr width="900px" color="gray">
+            <hr width="900px" color="gray">
+            <br>
+            <!-- shwoing slide -->
+            <marquee direction="right">Showing &ensp; Now &ensp; In &ensp;This - Day</marquee>
+            <div id="content-area">
 
             </div>
-    <script src="js/showing-now.js"> </script>
-    <link rel="stylesheet" href="css/showing-now.css">
-
-    <footer> copyright Umbrella @ 2019 </footer>
-
+            <!-- table data -->
+            <script src="js/showing-now.js"> </script>
+            <link rel="stylesheet" href="css/showing-now.css">
+            <br>
+            <!-- just for style -->
+            <hr width="900px" color="gray">
+            <hr width="900px" color="gray">
+            <br>
+            <footer> copyright Umbrella @ 2019 </footer>
 </body>
 
 </html>
