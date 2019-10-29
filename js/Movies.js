@@ -276,22 +276,7 @@ var myChart5 = new Chart(ctx, {
     }
 });
 }
-///////////////////////////////////////////////////////////////////
-//to show images
 
-// var romanticArray = ['imageschart/ca.jpg'];
-
-// function romanticRender()
-// {
-//     var showRomantic = document.getElementById('moviesPic');
-
-//     showRomantic.innerHTML = ' ';
-
-//     var element = document.createElement('section');
-//     showRomantic.appendChild(element);
-//     element.textContent = ('imageschart/ca.jpg' , 'imageschart/ca.jpg');
-
-// }
 
 var slideIndex = 0;
 showSlidesR();
