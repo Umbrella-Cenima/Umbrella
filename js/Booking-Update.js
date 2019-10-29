@@ -3,25 +3,41 @@
 var movieForm = document.getElementById('formArea-Movies');
 var movieD = document.getElementById('Movie-Details');
 
+var seatCounter = 0;
+newArray = [];   /// To show the user data 
+
+romanticMo = ['After','Downton Abbey','Maleficent','Aladdin','Judy (II)'];
+console.log('romanticMo , romanticMo.length : ', romanticMo , romanticMo.length);
+
+horrorMo = ['The Exorcist','Psycho','Halloween','The Thing','The Fly'];
+//console.log('horrorMo , horrorMo.length : ', horrorMo , horrorMo.length);
+
+comedyMo = ['Death at a Funeral','Step Brothers','The Hangover','Superbad','Project X'];
+//console.log('comedyMo , comedyMo.length : ', comedyMo , comedyMo.length);
+
+actionMo = ['The Equalizer','Logan','The Avengers','Captain Marvel','Black Panther'];
+//console.log('actionMo , actionMo.length : ', actionMo , actionMo.length);
+
+dramaMo = ['Joker','Gemini Man','The Lion King','The Irishman','IT 2'];
+// console.log('dramaMo , dramaMo.length : ', dramaMo , dramaMo.length);
+
 
 /////////////////////// Constructor Function for movies  ///////////////
-function MoviesKind(name, moviesSelect, seatKind, seatsNum) {
+function MoviesKind(name, moviesSelect, seatLoc, seatsNum ,payMethod) {
 
     this.name = name;
     this.moviesSelect = moviesSelect;
-    this.seatKind = seatKind;
+    this.seatLoc = seatLoc;
     this.seatsNum = seatsNum;
+    this.payMethod = payMethod;
+    this.timeDate = '';
 
     MoviesKind.moviesList.push(this);
-
 }
-
 MoviesKind.moviesList = [];                 // Empty array for user choice 
 
+new MoviesKind('', 'After', '', 0 , ' at 6pm ' );
 
-new MoviesKind();
-
-newArray = [];
 
 //////////// Store the user's data 
 function updateMovies() {
@@ -74,22 +90,51 @@ function handleSubmit(event) {
     // get all the values from the form
     var movies = event.target;
     var name = movies.name.value;
+
     console.log('name ', name);
     newArray.push(name);
 
     var moviesSelect = movies.moviesSelect.value;
     console.log('moviesSelect ', moviesSelect);
+    if (moviesSelect === "romantic")
+    {
+        alert('romantic');
+        romanticDRop();
+
+    }else if (moviesSelect === "horror")
+    {
+        alert('horror');
+
+    }else if (moviesSelect === "comedy")
+    {
+        alert('comedy');
+
+    }else if (moviesSelect === "action")
+    {
+        alert('action');
+
+    }else if (moviesSelect === "drama")
+    {
+        alert('drama');
+    }else {
+
+        alert('Please Choose Movie Type');
+    }
     newArray.push(moviesSelect);
 
-    var seatKind = movies.seatKind.value;
-    console.log('SeatKind ', seatKind);
-    newArray.push(seatKind);
+    var seatLoc = movies.seatLoc.value;
+    console.log('seatLoc ', seatLoc);
+    newArray.push(seatLoc);
 
     var seatsNum = parseInt(movies.seatsNum.value);
     console.log('seatsNum ', seatsNum);
     newArray.push(seatsNum);
 
-    new MoviesKind(name, moviesSelect, seatKind, seatsNum);
+    var payMethod = movies.payMethod.value;
+    console.log('payMethod ', payMethod);
+    newArray.push(payMethod);
+
+    new MoviesKind(name, moviesSelect, seatLoc, seatsNum , payMethod);
     console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
     console.log(' newArray', newArray);
 
@@ -106,4 +151,19 @@ movieForm.addEventListener('submit', handleSubmit);
 //   console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
 
 
-/////// Cinema Seats ////////
+/////////// Drop Down list //////////////
+function romanticDRop() {
+
+    //Done: Add an <option> tag inside the form's select for each product
+    var selectElement = document.getElementById('items');           // drop down list 
+
+    for (var i =0;i<romanticMo.length;i++) {
+  
+      var currentProduct = romanticMo[i];
+      var theOption = document.createElement('option');
+      selectElement.appendChild(theOption);
+      theOption.textContent = currentProduct;
+      theOption.value = romanticMo[i];
+    }
+  
+  }
