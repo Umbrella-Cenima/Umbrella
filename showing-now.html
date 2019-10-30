@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/showing-now.css">
     <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker%7CSrisakdi&display=swap" rel="stylesheet">
 
 </head>
@@ -65,7 +66,8 @@
             <hr width="900px" color="gray">
             <br>
             <!-- shwoing slide -->
-            <marquee direction="right">Showing &ensp; Now &ensp; In &ensp;This - Day</marquee>
+            <marquee style="font-family: 'Courgette', cursive;" direction="right">Showing &ensp; Now &ensp; In
+                &ensp;This - Day</marquee>
             <div id="content-area">
 
             </div>
@@ -80,9 +82,12 @@
             <br>
             <Form id="comments-field">
                 <fieldset>
-                    <legend> Reviews </legend>
-                    please input your review:<input type="text" name="name" placeholder='Type Here'> <br><br><br>
-                    <button type="submit"> Click To Leave A Comment </button>
+                    <legend> Customers Reviews </legend>
+                    <p id="bayan">
+                        Leave your comment : <input id="com" type="text" name="name" placeholder='Type Here'>
+                        <br><br><br>
+                    </p>
+                    <button id="but" type="submit"> Submit </button>
                     <!-- <button onclick="clickFunction()">Try it</button>
                     <p id="demo"></p>
                     <script>
@@ -95,40 +100,25 @@
                 <br><br>
 
             </Form>
-            
-           
-            <p id="comments-out"> 
+
+            <div id="RR">
+
+                <p id="comments-out">
 
 
-            </p>
+                </p>
+
+            </div>
 
             <script src="js/showing-now.js"> </script>
 
 </body>
+<br>
+<hr width="900px" color="gray">
+<hr width="900px" color="gray">
+<br>
 <footer>
-    <nav>
-            <ul class="navigation2">
-                <li class="nav2">
-                    <a href="homepage.html"> Home Page</a>
-                </li>
-                <li class="nav2">
-                    <a href="showing-now.html">Now Showing</a>
-                </li>
-                <li class="nav2">
-                    <a href="Movies.html" id="currentlink"> All Movies</a>
-                </li>
-                <li class="nav2">
-                    <a href="Booking.html">Booking a Ticket</a>
-                </li>
-                <li class="nav2">
-                    <a href="Cinema-Locations.html">Cinema Locations</a>
-                </li>
-                <li class="nav2">
-                    <a href="About-Us.html">About Us </a>
-                </li>
-            </ul>
-        </nav>
-       <p id="ah"> copyright Umbrella @ 2019</p>
+    <p style="font-size: 19px; font-family: 'Courgette', cursive;"> copyright Umbrella @ 2019</p>
 </footer>
 
 </html>

@@ -1,12 +1,14 @@
   th{
     
     height: 50px;
-    font-family: inherit;
-   font-weight: bolder;
+    font-family: 'Courgette', cursive;
+    font-weight: bolder;
     margin: 100px;
     border: 3px solid black;
     font-size: x-large;
     color: maroon;
+    text-shadow: 2px 2px white;
+
   }
  table{
      text-align: center;
@@ -18,6 +20,7 @@
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
+     
 
      }
   
@@ -45,7 +48,7 @@
      text-shadow: 2px 3px maroon;
      
  }
- tr:hover {background-color: maroon;
+ td:hover {background-color: maroon;
    border-bottom: 1px solid #ddd;
  }
  body{
@@ -235,32 +238,19 @@ header {
 
 h2{
    text-align: center;
-   font-family: 'Srisakdi', cursive;
+   font-family: 'Courgette', cursive;
    color: white;
    font-size: xx-large;   
    text-shadow: 5px 5px maroon;
+
 }
-/* footer{
-   text-align: center;
-   font-size: x-large;
-   background-color: black;
-   border: 0.5px solid rgb(197, 11, 11);
-   border-radius: 20px;
-   color: white;
-   font: 28px Papyrus, fantasy;
-   display: block;
-   min-height: 50px;
-   padding-top: 10px;
-   position: relative;
-   text-shadow: 3px 3px maroon;
-   left: -5px;
-} */
+
 legend{
    color: blanchedalmond;
    text-shadow: 3px 3px maroon;
    text-align: center;
    font-size: x-large;
-   font-family: cursive;
+   font-family: 'Courgette', cursive;
 }
 fieldset{
    color: antiquewhite;
@@ -274,6 +264,8 @@ fieldset{
    margin-left: 190px;
    text-align: center;
    height: 50px;
+   font-family: 'Courgette', cursive;
+
 }
 button{
    margin-left: 420px;
@@ -282,33 +274,15 @@ button{
     margin-left: 450px;
 
  }
- .navigation2 {
-   position: relative;
-   left: -3.9%;
-   margin-top: -5px;
-   margin-bottom: 10px;
-   width: 960px;
-   overflow: hidden;
-}
-.nav2 {
-   display: inline-block;
-   color: white;
-   font-size: 15px;
-   width: 125px;
-   /* text-align: center; */
-   /* padding: 10px; */
-   position: relative;
-   right: -100px;
-   text-align: center;
-}#ah{
+#ah{
    text-align: center;
    font-size: 18px;
 }
 footer{
    text-align: center;
-   font-size: 15px;
+   font-size: x-large;
    background-color: black;
-   border: 1px solid rgb(197, 11, 11);
+   border: 0.5px solid rgb(197, 11, 11);
    border-radius: 20px;
    color: white;
    font-family: Arial, Helvetica, sans-serif;;
@@ -316,21 +290,62 @@ footer{
    min-height: 50px;
    padding-top: 10px;
    position: relative;
-   /* left: -5px; */
-   width: 1800px;
+   text-shadow: 3px 3px maroon;
+   width: 1400px;
    position: absolute;
-     top: 1110px;
-     right: -100px;
-     /* margin-left: 500px; */
-     text-align: center;
+     right: -40px;
  }
  
  
- #comments-out 
- {
+ #comments-out {
 
-   color: aqua;
-   font-size: xx-large;
+   font-size: 18px;
+   background-image: url('https://photo2.tinhte.vn/data/attachment-files/2018/04/4282728_oqitDqs.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   border: 1px solid rgb(182, 177, 177);
+   font-family: 'Courgette', cursive;
+ 
+   border-radius: 25px;
+ }
+
+ #RR p {
+
+   color: rgb(241, 234, 234);
+   /* font-weight: bolder; */
+   text-align: center;
+   font-size: x-large;
+ }
+ #bayan{
+   position: relative;
+   top: 0px;
+   right: 0px;
+   color: rgb(255, 255, 255);
+   font-size: 20px;
+   text-shadow:2px 2px maroon;
+   font-family: 'Courgette', cursive;
+ }
+ #but{
+   position: relative;
+   top: -50px;
+   right: 44px;
+   width: 130px;
+   color: maroon;
+   font-family: 'Courgette', cursive;
+   font-size: 18px;
+   cursor: pointer;
+ }
+ fieldset{
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid rgb(243, 237, 237);
+
+ }
+ #com{
+    height: 100px;
+    width: 500px;
+    border-radius: 20px;
  }
 
  
