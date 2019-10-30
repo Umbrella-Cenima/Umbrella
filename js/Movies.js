@@ -16,86 +16,65 @@ function handleSubmit(event) {
     event.preventDefault();
     // get all the values from the form
     var movies = event.target;
-
     var gender = movies.gender.value;
-    // console.log('gender ', gender);
-  
     var age = movies.age.value;
-    // console.log('age ', age);
-
     var moviekind = movies.moviekind.value;
-    // console.log('moviekind ', moviekind);
-
-
     new MoviesTypes(gender, age, moviekind);
-    // console.log('MoviesTypes.popular : ', MoviesTypes.popular);
     // Update and render
 
     if (moviekind === "romantic")
     {
         romantic();
         setMoviesTypes();
-
     }
     else if (moviekind === "horror")
     {
         horror();
         setMoviesTypes();
-
     }
     else if (moviekind === "comedy")
     {
         comedy();
         setMoviesTypes();
-
     }
     else if (moviekind === "action")
     {
         action();
         setMoviesTypes();
-
     }
     else if (moviekind === "drama")
     {
         drama();
         setMoviesTypes();
-
     }
     else  
     {
         alert ('Please Select Movie Type ');
-        
         setMoviesTypes();
     }
   }
   data.addEventListener('submit', handleSubmit);
-
-
 ///////////////////
 //local storage
-
   function getMoviesTypes() {
     var data = localStorage.getItem('movie');
-    console.log("dss", data);
 
     var MoviesTypesData = JSON.parse(data);
     
       MoviesTypes.all = MoviesTypesData;
      
-  
   }
   function setMoviesTypes() {
-    var MoviesTypesString = JSON.stringify(MoviesTypes.all);
+    var MoviesTypesString = JSON.stringify(MoviesTypes.popular);
     localStorage.setItem('movie', MoviesTypesString);
   }
 
 ////////////////////////////
 //charts
 function romantic(){
-
 var ctx = document.getElementById('Chart1').getContext('2d');
 var myChart1 = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: [' After', 'Downton Abbey', 'Maleficent ', 'Aladdin (I) ', 'Judy (II) '],
         datasets: [{
@@ -183,7 +162,7 @@ function comedy() {
 
 var ctx = document.getElementById('Chart1').getContext('2d');
 var myChart3 = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: ['Death at a Funeral', 'Step Brothers ', 'The Hangover', 'Superbad', 'Project X'],
         datasets: [{
@@ -269,7 +248,7 @@ function drama() {
     
 var ctx = document.getElementById('Chart1').getContext('2d');
 var myChart5 = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: [' Joker', 'Gemini Man', 'The Lion King ', 'The Irishman', 'It Chapter Two'],
         datasets: [{
@@ -333,8 +312,6 @@ function showSlidesR() {
  setTimeout(showSlidesR, 2000); // Change image every 1 seconds
 }
 
-
-
 var slideIndex = 0;
 showSlidesH();
 function showSlidesH() {
@@ -353,8 +330,6 @@ function showSlidesH() {
  dots[slideIndex-1].className += " active";
  setTimeout(showSlidesH, 2500); // Change image every 1.15 seconds
 }
-
-
 
 var slideIndex = 0;
 showSlidesC();
@@ -376,8 +351,6 @@ function showSlidesC() {
 }
 
 
-
-
 var slideIndex = 0;
 showSlidesA();
 function showSlidesA() {
@@ -396,9 +369,6 @@ function showSlidesA() {
  dots[slideIndex-1].className += " active";
  setTimeout(showSlidesA, 3500); // Change image every 1.45 seconds
 }
-
-
-
 
 
 var slideIndex = 0;

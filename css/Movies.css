@@ -8,9 +8,6 @@ fieldset{
   background-size: cover;
   height: 200px;
 
-   
-    
-
 
 }
 legend{
@@ -44,7 +41,7 @@ label{
 }
 #button{
     cursor: pointer;
-    color: rgb(189, 35, 35);
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-left: 370px;
     background-color: black;
@@ -53,9 +50,10 @@ label{
     font: 15px Papyrus, fantasy;
     font-display: bold;
     width: 150px;
+    height: 50px;
     position: absolute;
-    top: 560px;
-    right: 550px;
+    top: 526px;
+    right: 535px;
 }
 .slideshow-containerR {
     position: relative;
@@ -227,9 +225,7 @@ nav a:hover {
 .TopMovies h1 {
   text-shadow: 5px 5px maroon;
 }
-/* #video {
-  height: 380px;
-} */
+
 /* Images slide show  */
 /* Slideshow container */
 .slideshow-container {
@@ -237,15 +233,7 @@ nav a:hover {
   margin: auto;
   text-align: center;
  }
- /* Number text (1/10 etc) */
-/* .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
- } */
- /* The dots/bullets/indicators */
+
 .dot {
   height: 15px;
   width: 15px;
@@ -314,25 +302,7 @@ h2{
     font-size: 16px; 
     font-family: cursive;
 }
-.navigation2 {
-    position: relative;
-    left: -3.9%;
-    margin-top: -5px;
-    margin-bottom: 10px;
-    width: 960px;
-    overflow: hidden;
- }
- .nav2 {
-    display: inline-block;
-    color: white;
-    font-size: 12px;
 
-    width: 135px;
-    /* text-align: center; */
-    /* padding: 10px; */
-    position: relative;
-    right: -100px;
- }
 
  footer{
     text-align: center;
@@ -347,7 +317,6 @@ h2{
     padding-top: 10px;
     position: relative;
     text-shadow: 3px 3px maroon;
-    /* left: -5px; */
     width: 1300px;
     position: absolute;
       top: 2810px;
@@ -355,5 +324,6 @@ h2{
       margin-left: 500px;
   
   }
+  
 
   
