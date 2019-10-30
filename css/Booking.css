@@ -129,36 +129,35 @@ body{
   main h1 {
 
     text-align: center;
-    font-family: 'Srisakdi', cursive;
+    font-family: unset;
     color: white;
-    font-size: xx-large;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    font-size: 35ox;
     text-shadow: 5px 5px maroon;
   }
 
 
   /* Forms CSS  */
   fieldset {
-   background-color:maroon;
-   border: 5px solid white;
+   border: 2px solid rgb(241, 237, 237);
    border-radius: 20px;
-   margin-top: 30px;
-   font-family: 'Srisakdi', cursive;
+   /* margin-top: 30px; */
+   font-family: unset;
    padding: 20px;
    font-size: x-large;
    font-style: oblique;
+   background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/dpmDSBWkWGFebViZKJuG7/c488da0a5c57abcaf6dcade349d14347/Feature-Hub-Copy-compressor.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: thistle;
 }
 
 legend {
-   color: black;
-   background-color: white;
-   border: 5px solid rgb(48, 21, 110);
+   color: rgb(248, 246, 246);
+   background-color:rgb(8, 8, 8);
+   border: 1px solid rgb(77, 4, 4);
    border-radius: 20px;
-   margin-top: 30px;
-   padding: 20px;
-   font-family: Georgia;
-   font-style: oblique;
+   
  }
 
  input[type=text]{

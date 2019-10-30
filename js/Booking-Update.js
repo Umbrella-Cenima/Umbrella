@@ -121,7 +121,7 @@ function handleSubmit(event) {
 
     var moviesNAME = movies.moviesNAME.value;
     newArray.push(moviesNAME);
-    
+
     var seatLoc = movies.seatLoc.value;
     //console.log('seatLoc ', seatLoc);
     newArray.push(seatLoc);
@@ -352,7 +352,7 @@ function updateMovieName(moviesSelect) {
         var newMovie = MoviesNameSeatNum.moviesNameSeatList[i];
         //console.log('newMovies : ', newMovie);
         if (newMovie.name === moviesSelect )
-        addElement('p', alloutput,'You Have chosen ' +  + 'Movie To watch It on ' +  + ', Number Of Seat :' +  + ' with' +  + ' Class');
+        addElement('p', alloutput,'You Have chosen ' +  'Movie To watch It on ' +  ', Number Of Seat :' +  ' with' +  ' Class');
     
     }
        
