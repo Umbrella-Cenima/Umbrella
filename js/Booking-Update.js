@@ -251,11 +251,12 @@ selectElement.addEventListener('change',
 ////////////////////////////////////// User Movie Choice & Seat Counter  /////////////////////////////////////////////////////////////
 
 ////////// Constructor Function for movie name ////////
-function MoviesNameSeatNum(name, src,timeDate) {
+function MoviesNameSeatNum(name, src,cinemaName,date) {
 
     this.name = name;
     this.src = src;
-    this.timeDate = timeDate;
+    this.cinemaName = cinemaName;
+    this.date = date;
 
     this.seatCounter = 0;
 
@@ -266,35 +267,35 @@ function MoviesNameSeatNum(name, src,timeDate) {
 
 MoviesNameSeatNum.moviesNameSeatList = [];
 
-new MoviesNameSeatNum('After', 'moviesNameImg/After.jpg','jjjjjjjjjjjjjjjjjj');
-new MoviesNameSeatNum('Downton Abbey', 'moviesNameImg/Downton Abbey.jpg');
-new MoviesNameSeatNum('Maleficent', 'moviesNameImg/Maleficent.jpg');
-new MoviesNameSeatNum('Aladdin', 'moviesNameImg/Aladdin.jpg');
-new MoviesNameSeatNum('Judy (II)', 'moviesNameImg/Judy.jpg');
+new MoviesNameSeatNum('After', 'moviesNameImg/After.jpg','Taj Cinema',' At 4:00 PM');
+new MoviesNameSeatNum('Downton Abbey', 'moviesNameImg/Downton Abbey.jpg','Grand Cinema' , 'At 4:00 PM');
+new MoviesNameSeatNum('Maleficent', 'moviesNameImg/Maleficent.jpg','Prime Cinema' , 'At 4:00 PM');
+new MoviesNameSeatNum('Aladdin', 'moviesNameImg/Aladdin.jpg','City Cinema' , 'At 8:00 PM');
+new MoviesNameSeatNum('Judy (II)', 'moviesNameImg/Judy.jpg','Abdali Cinema' , 'At 8:00 PM');
 
-new MoviesNameSeatNum('The Exorcist', 'moviesNameImg/The Exorcist.jpg');
-new MoviesNameSeatNum('Psycho', 'moviesNameImg/Psycho.jpg');
-new MoviesNameSeatNum('Halloween', 'moviesNameImg/Halloween.jpg');
-new MoviesNameSeatNum('The Thing', 'moviesNameImg/The Thing.png');
-new MoviesNameSeatNum('The Fly', 'moviesNameImg/The Fly.jpg');
+new MoviesNameSeatNum('The Exorcist', 'moviesNameImg/The Exorcist.jpg','Taj Cinema',' At 6:00 PM');
+new MoviesNameSeatNum('Psycho', 'moviesNameImg/Psycho.jpg','Grand Cinema' , 'At 6:00 PM');
+new MoviesNameSeatNum('Halloween', 'moviesNameImg/Halloween.jpg','Prime Cinema' , 'At 6:00 PM');
+new MoviesNameSeatNum('The Thing', 'moviesNameImg/The Thing.png','City Cinema' , 'At 10:00 PM');
+new MoviesNameSeatNum('The Fly', 'moviesNameImg/The Fly.jpg','Abdali Cinema' , 'At 10:00 PM');
 
-new MoviesNameSeatNum('Death at a Funeral', 'moviesNameImg/Death at a Funeral.jpg');
-new MoviesNameSeatNum('Step Brothers', 'moviesNameImg/Step Brothers.jpg');
-new MoviesNameSeatNum('The Hangover', 'moviesNameImg/The Hangover.jpg');
-new MoviesNameSeatNum('Superbad', 'moviesNameImg/Superbad.jpg');
-new MoviesNameSeatNum('Project X', 'moviesNameImg/Project X.jpg');
+new MoviesNameSeatNum('Death at a Funeral', 'moviesNameImg/Death at a Funeral.jpg','Taj Cinema',' At 8:00 PM');
+new MoviesNameSeatNum('Step Brothers', 'moviesNameImg/Step Brothers.jpg','Grand Cinema' , 'At 8:00 PM');
+new MoviesNameSeatNum('The Hangover', 'moviesNameImg/The Hangover.jpg','Prime Cinema' , 'At 8:00 PM');
+new MoviesNameSeatNum('Superbad', 'moviesNameImg/Superbad.jpg','City Cinema' , 'At 12:00 AM');
+new MoviesNameSeatNum('Project X', 'moviesNameImg/Project X.jpg','Abdali Cinema' , 'At 12:00 AM');
 
-new MoviesNameSeatNum('The Equalizer', 'moviesNameImg/The Equalizer.jpg');
-new MoviesNameSeatNum('Logan', 'moviesNameImg/Logan.jpg');
-new MoviesNameSeatNum('The Avengers', 'moviesNameImg/The Avengers.jpg');
-new MoviesNameSeatNum('Captain Marvel', 'moviesNameImg/Captain Marvel.jpg');
-new MoviesNameSeatNum('Black Panther', 'moviesNameImg/Black Panther.jpg');
+new MoviesNameSeatNum('The Equalizer', 'moviesNameImg/The Equalizer.jpg','Taj Cinema',' At 10:00 PM');
+new MoviesNameSeatNum('Logan', 'moviesNameImg/Logan.jpg','City Cinema' , 'At 4:00 PM');
+new MoviesNameSeatNum('The Avengers', 'moviesNameImg/The Avengers.jpg','Grand Cinema' , 'At 10:00 PM');
+new MoviesNameSeatNum('Captain Marvel', 'moviesNameImg/Captain Marvel.jpg','Prime Cinema' , 'At 10:00 PM');
+new MoviesNameSeatNum('Black Panther', 'moviesNameImg/Black Panther.jpg','Abdali Cinema' , 'At 4:00 PM');
 
-new MoviesNameSeatNum('Joker', 'moviesNameImg/Joker.jpg');
-new MoviesNameSeatNum('Gemini Man', 'moviesNameImg/Gemini Man.jpg');
-new MoviesNameSeatNum('The Lion King', 'moviesNameImg/The Lion King.jpg');
-new MoviesNameSeatNum('The Irishman', 'moviesNameImg/The Irishman.jpg');
-new MoviesNameSeatNum('IT 2', 'moviesNameImg/IT2.jpg');
+new MoviesNameSeatNum('Joker', 'moviesNameImg/Joker.jpg','Taj Cinema',' At 12:00 AM');
+new MoviesNameSeatNum('Gemini Man', 'moviesNameImg/Gemini Man.jpg','Grand Cinema' , 'At 12:00 AM');
+new MoviesNameSeatNum('The Lion King', 'moviesNameImg/The Lion King.jpg','Prime Cinema' , 'At 12:00 AM');
+new MoviesNameSeatNum('The Irishman', 'moviesNameImg/The Irishman.jpg','City Cinema' , 'At 6:00 PM');
+new MoviesNameSeatNum('IT 2', 'moviesNameImg/IT2.jpg','Abdali Cinema' , 'At 6:00 PM');
 
 
 MoviesNameSeatNum.container = document.getElementById('movieImage');
@@ -336,6 +337,8 @@ function updateMovieName(moviesSelect) {
             addElement('li', alloutput,'Seat Class : ' + ProductDataaa[3] )
             addElement('li', alloutput,'Number Of Seats : ' + ProductDataaa[4] )
             addElement('li', alloutput,'Payment Method : ' + ProductDataaa[5] )
+            addElement('li', alloutput,'Cinema Name : ' + newMovie.timeDate )
+
         }
        
        
