@@ -41,19 +41,6 @@ function setUserData() {
     localStorage.setItem('movies', moviesString);
 } // Ending of set function 
 
-
-// function renderMovie() {
-
-//     movieD.innerHTML = '';
-//     // for (var i = 0; i < newArray.length; i++) {
-//     // var all = newArray[i];
-//     var element = document.createElement('p');
-//     movieD.appendChild(element);
-//     element.textContent = " Welcome Mr/Miss " + newArray[0] + 'You Chosen A ' + newArray[1] + ' Movie Kind With Seat Type' + newArray[2] + ' And The Number Of Seats is ' + newArray[3];
-
-//     // }
-// } // Ending of renderMovie() function 
-
 function handleSubmit(event) {
 
     event.preventDefault();
@@ -113,8 +100,7 @@ function handleSubmit(event) {
 
 
 
-    // Update and render 
-
+    // updateMovieName();
     setUserData();
     // renderMovie();
     // getMovies();
@@ -251,12 +237,12 @@ selectElement.addEventListener('change',
 ////////////////////////////////////// User Movie Choice & Seat Counter  /////////////////////////////////////////////////////////////
 
 ////////// Constructor Function for movie name ////////
-function MoviesNameSeatNum(name, src,cinemaName,date) {
+function MoviesNameSeatNum(name, src,cinemaName,Moviedate) {
 
     this.name = name;
     this.src = src;
     this.cinemaName = cinemaName;
-    this.date = date;
+    this.Moviedate = Moviedate;
 
     this.seatCounter = 0;
 
@@ -337,7 +323,9 @@ function updateMovieName(moviesSelect) {
             addElement('li', alloutput,'Seat Class : ' + ProductDataaa[3] )
             addElement('li', alloutput,'Number Of Seats : ' + ProductDataaa[4] )
             addElement('li', alloutput,'Payment Method : ' + ProductDataaa[5] )
-            addElement('li', alloutput,'Cinema Name : ' + newMovie.timeDate )
+            addElement('li', alloutput,'Cinema Name : ' + newMovie.cinemaName )
+            addElement('li', alloutput,'Time : ' + newMovie.Moviedate )
+
 
         }
        
@@ -368,32 +356,6 @@ function setMoviesNames() {
 setMoviesNames();
 
 
-// ////////// Retrieve the user data from local storage 
-// function getMovies() {
-//     var dataP = localStorage.getItem('movies');
-//     console.log(' dataP', dataP);
-//     var ProductData = JSON.parse(dataP);
-//     console.log('Product data', ProductData);
-
-//     if (ProductData) {
-//         console.log('ProductData.length', ProductData.length);
-//         //console.log(' products length  2 ' , AllProductsCont.all.length  );
-//         //   for (let i = 0; i < ProductData.length; i++) {
-//         var rawProductObject = ProductData.name;
-//         console.log('ProductData.name : ', ProductData.name);
-//         // var chgProductCtrs = MoviesKind.moviesList[i];
-//         //console.log(' products length  2 ' , AllProductsCont.all.length  );
-
-//         renderMovie();
-//     } else {
-
-//         alert(' nothing here ');
-//         // new AllProductsCont('bag', 'img/bag.jpg');
-
-//     }
-//     //console.log('local Storage Data', ProductData);
-// } //// Ending Of get Products Function 
-
 function getMovies(moviesSelect) {
 
     var dataP = localStorage.getItem('MoviesName');
@@ -420,7 +382,7 @@ function getMovies(moviesSelect) {
             }
 
         }
-        updateMovieName(moviesSelect);
+        // updateMovieName(moviesSelect);
     } else {
 
         alert(' nothing here ');
@@ -455,6 +417,7 @@ selectElement.addEventListener('change',
                 // alert('ROMANTIC Movie Name ');
                 // renderRomanticMovie(moviesSelect);
                 getMovies(moviesSelect);
+                updateMovieName(moviesSelect);
                 break;
 
             case "The Exorcist":

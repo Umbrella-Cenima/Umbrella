@@ -4,6 +4,7 @@
 <head>
 
     <title>Booking A Movie Ticket </title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Booking.css">
     <!-- <link rel="stylesheet" href="css/HomePage.css"> -->
 
@@ -64,12 +65,12 @@
             <hr width="900px" color="gray">
             <main>
 
-                <h1> Book a Ticket : </h1>
+                <h1> Book a Ticket </h1>
                 <form id="formArea-Movies">
                     <!-- fieldset : to group all information in one place as you like to divided your web pages  -->
                     <fieldset>
                         <!-- legend: to heading some info together  , every single text input -->
-                        <legend> The Needed Information To Book A Ticket :- </legend><br></br>
+                        <legend> The Needed Information To Book A Ticket </legend><br></br>
 
                         <label> Your Name : </label>
                         <input type="text" name="name" placeholder='Type Here'>
@@ -94,9 +95,9 @@
                         </label>
                         <br></br><br>
 
-                        <label> Seat Class : </label>
-                        <input type="text" name="seatLoc" placeholder='Type Here'>
-                        <a style="color: white; padding-left: 15px;" href="seatsLayout.html">Click
+                        <label > Seat Class : </label>
+                        <input style="width: 200px;" type="text" name="seatLoc" placeholder='Type Here'>
+                        <a style="color: red; padding-left: 15px;" href="seatsLayout.html">Click
                         </a>
 
                         <br></br><br>
@@ -122,38 +123,34 @@
                     <button type="submit"> Click To Buy A Ticket </button>
                 </form>
 
+
+                <section id="ticketD">
+                        <h1> Your Ticket Details </h1>
+                        <p id="Movie-Details">
+    
+                        </p>
+                    </section>
+    
+                    <section id="movieImage">
+    
+                        <ul id="Movie-sentences" style="color: cyan;font-size:x-large;">
+    
+                        </ul>
+    
+                        <div>
+                            <img id="movie-image" src="images/Umbrella.jpg" alt="movImg">
+                            <h2 id="movie-title">Title here</h2>
+                        </div>
+    
+    
+                    </section>
                 <!-- Time Button -->
                 <div class="Time-Button">
                     <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
                         Click me to display Date and Time.</button>
                     <p id="demo"></p>
                 </div>
-
-
-                <section id="ticketD">
-                    <h1> Your Ticket Details </h1>
-                    <p id="Movie-Details">
-
-                    </p>
-                </section>
-
-                <section id="movieImage">
-
-                    <ul id="Movie-sentences" style="color: cyan;font-size:x-large;">
-
-                    </ul>
-
-                    <div>
-                        <img id="movie-image" src="images/Umbrella.jpg" alt="movImg">
-                        <h2 id="movie-title">Title here</h2>
-                    </div>
-
-
-                </section>
-
             </main>
-
-
 
             <footer>
                 <p style="font-size: 19px; font-family: 'Courgette', cursive;"> copyright Umbrella @ 2019</p>
