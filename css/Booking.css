@@ -272,9 +272,6 @@ footer{
     margin-left: 500px;
 }
 
-
-/* /////// For LI ///////// */
-
 #Movie-Details {
 
 color: white;   
@@ -294,8 +291,12 @@ h3 {
 
 #movieImage {
 
-  color: white;
+  color: rgb(10, 201, 58);
   font-size: x-large;
   text-align: center;
   margin-top: 50px;
+}
+#movie-image {
+
+  width: 200px;
 }
