@@ -202,11 +202,9 @@ footer{
    padding-top: 10px;
    position: relative;
    text-shadow: 3px 3px maroon;
-   /* left: -5px; */
-   width: 1300px;
+   width: 1400px;
    position: absolute;
-     top: 1710px;
-     right: -60px;
-     margin-left: 500px;
- 
+     /* top: 1500px; */
+     right: -40px;
+     /* margin-left: 500px; */
  }
