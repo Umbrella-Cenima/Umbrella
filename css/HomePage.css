@@ -1,193 +1,194 @@
 body{
-   background-image: url('https://www.quantumblack.com/static/hero-home-66ad0082c5fa59b705aec799685a5a5e-6ded7.jpg');
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
-  
+  background-image: url('https://www.quantumblack.com/static/hero-home-66ad0082c5fa59b705aec799685a5a5e-6ded7.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
- 
 /* The Header Styling  */
-
 header {
-    background-color: black;
-    border: 0.5px solid rgb(197, 11, 11);
-    border-radius: 20px;
-    margin-bottom: 50px;
-    color: maroon;
-    font: 28px Papyrus, fantasy;
-    min-width: 924px;
-    display: block;
-    min-height: 120px;
-    margin-top: -3px;
-    position: relative;
-    left: -5px;
- }
-
- h1 {
-    margin-right: 20px;
- }
- #bannerimage {
-    float: left;
-    width: 100px;
-    text-align: right;
- }
- #bannerjpg {
+   background-color: black;
+   border: 0.5px solid rgb(197, 11, 11);
+   border-radius: 20px;
+   margin-bottom: 50px;
+   color: rgb(255, 255, 255);
+   font: 28px Papyrus, fantasy;
+   min-width: 924px;
+   display: block;
+   min-height: 120px;
+   margin-top: -3px;
    position: relative;
-   left: 25%;
- }
- #bannerimage + div {
-    text-align: right;
- }
- #bannerimage img {
-    height: 100px;
-    width: 100px;
-    transform: rotateY(0deg);
-    transition: transform 3s;
- }
- #bannerimage img:hover {
-    transform: rotateY(360deg);
-    border: hidden;
- }
- #bannerlogo {
-    margin-right: 0;
- }
- .homelink {
-    color: maroon;
-    text-shadow: 3px 3px white;
-    text-decoration: none;
-    font-style: italic;
- }
- .transluscent-mat {
-    width: 916px;
-    margin: auto;
-    padding-top: 0.1px;
- }
-
- #search input:focus {
-    background-color: rgb(151, 151, 145);
- }
- div[id="search"] a{
-    color: silver;
-    font-family: Papyrus, fantasy;
-    text-decoration: none;
-
- }
- div[id="search"] form{
-    position: relative;
-    left: -40px;
-    top: -3px;
- }
- div p {
-    color: white;
-    font: 14px 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-    padding-left: 17px;
+   left: -5px;
+   text-shadow:4px 4px maroon;
 }
-
-
-/* The Navigation Styling  */
-
-.navigation {
-    position: relative;
-    left: -3.9%;
-    margin-top: -5px;
-    margin-bottom: 10px;
-    width: 960px;
-    overflow: hidden;
- }
- .nav {
-    display: inline-block;
-    color: white;
-    background-color: black;
-    border: 2px rgb(156, 11, 11) solid;
-    border-radius: 30px;
-    width: 125px;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    left: -3.5px;
-    box-shadow: 1px 1px 1px black;
- }
-
- #currentlink {
-    pointer-events: none;
-    cursor: default;
-    color: #3399FF;
- }
- nav a:link {
-    color: white;
-    text-decoration: none;
- }
- nav a:visited {
-    color: white;
-    text-decoration: none;
- }
- nav a:hover {
-    color: maroon;
-    text-decoration: none;
- }
-
- .TopMovies  {
-   text-align: center;
-   font-family: 'Srisakdi', cursive;
-   color: white;
-   font-size: x-large;
- }
-
- .TopMovies h1 {
-
-   text-shadow: 5px 5px maroon;
-
- }
-
- #video {
-   height: 380px;
- }
-
-
- /* Images slide show  */
- /* Slideshow container */
-.slideshow-container {
-   position: relative;
+h1 {
+   margin-right: 20px;
+}
+#bannerimage {
+   float: left;
+   width: 100px;
+   text-align: right;
+}
+#bannerjpg {
+  position: relative;
+  left: 25%;
+}
+#bannerimage + div {
+   text-align: right;
+}
+#bannerimage img {
+   height: 100px;
+   width: 100px;
+   transform: rotateY(0deg);
+   transition: transform 3s;
+}
+#bannerimage img:hover {
+   transform: rotateY(360deg);
+   border: hidden;
+}
+#bannerlogo {
+   margin-right: 0;
+}
+.homelink {
+   color: rgb(255, 255, 255);
+   text-shadow: 3px 3px maroon;
+   text-decoration: none;
+   font-style: italic;
+}
+.transluscent-mat {
+   width: 916px;
    margin: auto;
-   text-align: center;
-  }
-
-  /* Number text (1/10 etc) */
-.numbertext {
-   color: #f2f2f2;
-   font-size: 12px;
-   padding: 8px 12px;
-   position: absolute;
-   top: 0;
-  }
-
-  /* The dots/bullets/indicators */
-.dot {
-   height: 15px;
-   width: 15px;
-   margin: 0px 5px;
-   background-color: #bbb;
-   border-radius: 50%;
-   display: inline-block;
-   transition: background-color 0.6s ease;
-  }
-
-  .active {
-   background-color: maroon;
-  }
-
-  .fade {
-   animation-name: fade;
-   animation-duration: 1.5s;
-  }
-
-h2{
-   text-align: center;
-   font-family: 'Srisakdi', cursive;
-   color: white;
-   font-size: xx-large;   
-   text-shadow: 5px 5px maroon;
+   padding-top: 0.1px;
 }
+#search input:focus {
+   background-color: rgb(151, 151, 145);
+}
+div[id="search"] a{
+   color: silver;
+   font-family: Papyrus, fantasy;
+   text-decoration: none;
+}
+div[id="search"] form{
+   position: relative;
+   left: -40px;
+   top: -3px;
+}
+div p {
+   color: white;
+   font: 14px 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+   padding-left: 17px;
+}
+/* The Navigation Styling  */
+.navigation {
+   position: relative;
+   left: -3.9%;
+   margin-top: -5px;
+   margin-bottom: 10px;
+   width: 960px;
+   overflow: hidden;
+}
+.nav {
+   display: inline-block;
+   color: white;
+   background-color: black;
+   border: 2px rgb(156, 11, 11) solid;
+   border-radius: 30px;
+   width: 125px;
+   text-align: center;
+   padding: 10px;
+   position: relative;
+   left: -3.5px;
+   box-shadow: 1px 1px 1px black;
+}
+#currentlink {
+   pointer-events: none;
+   cursor: default;
+   color: #3399FF;
+}
+nav a:link {
+   color: white;
+   text-decoration: none;
+}
+nav a:visited {
+   color: white;
+   text-decoration: none;
+}
+nav a:hover {
+   color: maroon;
+   text-decoration: none;
+}
+.TopMovies  {
+  text-align: center;
+  font-family: 'Srisakdi', cursive;
+  color: white;
+  font-size: x-large;
+}
+.TopMovies h1 {
+  text-shadow: 5px 5px maroon;
+}
+#video {
+  height: 380px;
+}
+/* Images slide show  */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  text-align: center;
+ }
+ /* Number text (1/10 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+ }
+ /* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0px 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+ }
+ .active {
+  background-color: maroon;
+ }
+ .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+ }
+h2{
+  text-align: center;
+  font-family: 'Srisakdi', cursive;
+  color: white;
+  font-size: xx-large;
+  text-shadow: 5px 5px maroon;
+}
+
+
+.navigation2 {
+   position: relative;
+   left: -3.9%;
+   margin-top: -5px;
+   margin-bottom: 10px;
+   width: 960px;
+   overflow: hidden;
+}
+.nav2 {
+   display: inline-block;
+   color: white;
+   font-size: 12px;
+
+   width: 135px;
+   /* text-align: center; */
+   /* padding: 10px; */
+   position: relative;
+   right: -100px;
+}
+
 footer{
    text-align: center;
    font-size: x-large;
@@ -195,11 +196,17 @@ footer{
    border: 0.5px solid rgb(197, 11, 11);
    border-radius: 20px;
    color: white;
-   font: 28px Papyrus, fantasy;
+   font-family: Arial, Helvetica, sans-serif;;
    display: block;
    min-height: 50px;
    padding-top: 10px;
    position: relative;
    text-shadow: 3px 3px maroon;
-   left: -5px;
-}
+   /* left: -5px; */
+   width: 1300px;
+   position: absolute;
+     top: 1710px;
+     right: -60px;
+     margin-left: 500px;
+ 
+ }
