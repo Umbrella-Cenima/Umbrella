@@ -30,56 +30,29 @@ function MoviesKind(name, moviesSelect, seatLoc, seatsNum, payMethod) {
     this.seatLoc = seatLoc;
     this.seatsNum = seatsNum;
     this.payMethod = payMethod;
-    // this.timeDate = '';
 
     MoviesKind.moviesList.push(this);
 }
 MoviesKind.moviesList = [];                 // Empty array for user choice 
 
 //////////// Store the user's data 
-function updateMovies() {
-    var moviesString = JSON.stringify(MoviesKind.moviesList);
+function setUserData() {
+    var moviesString = JSON.stringify(newArray);
     localStorage.setItem('movies', moviesString);
 } // Ending of set function 
 
 
-////////// Retrieve the user data from local storage 
-function getMovies() {
-    var dataP = localStorage.getItem('movies');
-    console.log(' dataP', dataP);
-    var ProductData = JSON.parse(dataP);
-    console.log('Product data', ProductData);
+// function renderMovie() {
 
-    if (ProductData) {
-        console.log('ProductData.length', ProductData.length);
-        //console.log(' products length  2 ' , AllProductsCont.all.length  );
-        //   for (let i = 0; i < ProductData.length; i++) {
-        var rawProductObject = ProductData.name;
-        console.log('ProductData.name : ', ProductData.name);
-        // var chgProductCtrs = MoviesKind.moviesList[i];
-        //console.log(' products length  2 ' , AllProductsCont.all.length  );
+//     movieD.innerHTML = '';
+//     // for (var i = 0; i < newArray.length; i++) {
+//     // var all = newArray[i];
+//     var element = document.createElement('p');
+//     movieD.appendChild(element);
+//     element.textContent = " Welcome Mr/Miss " + newArray[0] + 'You Chosen A ' + newArray[1] + ' Movie Kind With Seat Type' + newArray[2] + ' And The Number Of Seats is ' + newArray[3];
 
-        renderMovie();
-    } else {
-
-        alert(' nothing here ');
-        // new AllProductsCont('bag', 'img/bag.jpg');
-
-    }
-    //console.log('local Storage Data', ProductData);
-} //// Ending Of get Products Function 
-
-function renderMovie() {
-
-    movieD.innerHTML = '';
-    // for (var i = 0; i < newArray.length; i++) {
-    // var all = newArray[i];
-    var element = document.createElement('p');
-    movieD.appendChild(element);
-    element.textContent = " Welcome Mr " + newArray[0] + 'You Chosen A ' + newArray[1] + ' Movie Kind With Seat Type' + newArray[2] + ' And The Number Of Seats is ' + newArray[3];
-
-    // }
-} // Ending of renderMovie() function 
+//     // }
+// } // Ending of renderMovie() function 
 
 function handleSubmit(event) {
 
@@ -142,7 +115,7 @@ function handleSubmit(event) {
 
     // Update and render 
 
-    // updateMovies();
+    setUserData();
     // renderMovie();
     // getMovies();
 
@@ -336,8 +309,12 @@ MoviesNameSeatNum.middleObject = null;
 function updateMovieName(moviesSelect) {
 
 
-    console.log(' update movie name ' ,moviesSelect );
+    //console.log(' update movie name ' ,moviesSelect );
+    var dataP = localStorage.getItem('MoviesName');
+    var ProductData = JSON.parse(dataP);
 
+    var dataPpp = localStorage.getItem('movies');
+    var ProductDataaa = JSON.parse(dataPpp);
 
     var alloutput = document.getElementById('Movie-sentences');
 
@@ -345,15 +322,23 @@ function updateMovieName(moviesSelect) {
 
     console.log('newarray : ', newArray);
 
-    for (var i =0;i<MoviesNameSeatNum.moviesNameSeatList.length;i++)
+    for (var i =0;i<ProductData.length;i++)
     {
         // var userData = MoviesKind.moviesList;
         
         var newMovie = MoviesNameSeatNum.moviesNameSeatList[i];
         //console.log('newMovies : ', newMovie);
         if (newMovie.name === moviesSelect )
-        addElement('p', alloutput,'You Have chosen ' +  'Movie To watch It on ' +  ', Number Of Seat :' +  ' with' +  ' Class');
-    
+        {
+            addElement('li', alloutput,'Your Name : ' + ProductDataaa[0] )
+            addElement('li', alloutput,'Movie Kind : ' + ProductDataaa[1] )
+            addElement('li', alloutput,'Movie Name : ' + ProductDataaa[2] )
+            addElement('li', alloutput,'Seat Class : ' + ProductDataaa[3] )
+            addElement('li', alloutput,'Number Of Seats : ' + ProductDataaa[4] )
+            addElement('li', alloutput,'Payment Method : ' + ProductDataaa[5] )
+        }
+       
+       
     }
        
 } // Ending Total Updates product function 
@@ -379,6 +364,32 @@ function setMoviesNames() {
 
 setMoviesNames();
 
+
+// ////////// Retrieve the user data from local storage 
+// function getMovies() {
+//     var dataP = localStorage.getItem('movies');
+//     console.log(' dataP', dataP);
+//     var ProductData = JSON.parse(dataP);
+//     console.log('Product data', ProductData);
+
+//     if (ProductData) {
+//         console.log('ProductData.length', ProductData.length);
+//         //console.log(' products length  2 ' , AllProductsCont.all.length  );
+//         //   for (let i = 0; i < ProductData.length; i++) {
+//         var rawProductObject = ProductData.name;
+//         console.log('ProductData.name : ', ProductData.name);
+//         // var chgProductCtrs = MoviesKind.moviesList[i];
+//         //console.log(' products length  2 ' , AllProductsCont.all.length  );
+
+//         renderMovie();
+//     } else {
+
+//         alert(' nothing here ');
+//         // new AllProductsCont('bag', 'img/bag.jpg');
+
+//     }
+//     //console.log('local Storage Data', ProductData);
+// } //// Ending Of get Products Function 
 
 function getMovies(moviesSelect) {
 
