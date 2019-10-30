@@ -51,13 +51,14 @@ label{
     font-display: bold;
     width: 150px;
     height: 50px;
-    position: absolute;
-    top: 526px;
-    right: 535px;
+    position: relative;
+    top: 46px;
+    right: 0px;
 }
 .slideshow-containerR {
     position: relative;
     margin-left: -80px;
+
     text-align: center;
     width: 360px;
     border-color: maroon;
@@ -255,52 +256,58 @@ h2{
   font-family: 'Srisakdi', cursive;
   color: white;
   font-size: xx-large;
-  text-shadow: 5px 5px maroon;
+  font-family: 'Courgette', cursive;
+  text-shadow: 2px 2px maroon;
 }
 
 
 #com{
     margin-left: 370px;
-    position: absolute;
-    top: 110px;
-    right: -320px;
+    position:relative;
+    top: -330px;
+    right: 0px;
     width: 320px; 
     font-size: 16px; 
-    font-family: cursive;
+    font-family: 'Courgette', cursive;
+    text-shadow: 2px 2px maroon;
 }
 
 #rom{
-    position: absolute;
-    top: 110px;
+    position: relative;
+    top: -300px;
     right: -320px;
     width: 320px; 
     font-size: 16px; 
-    font-family: cursive;
+    font-family: 'Courgette', cursive;
+    text-shadow: 2px 2px maroon;
 }
 #hor{
-    position: absolute;
-    top: 110px;
+    position: relative;
+    top: -310px;
     right: 420px;
     width: 320px; 
     font-size: 16px; 
-    font-family: cursive;
+    font-family: 'Courgette', cursive;
+    text-shadow: 2px 2px maroon;
 }
  
 #act{
-    position: absolute;
-    top: 110px;
-    right: 420px;
+    position: relative;
+    top: -320px;
+    right: 380px;
     width: 320px; 
     font-size: 16px; 
-    font-family: cursive;
+    font-family: 'Courgette', cursive;
+    text-shadow: 2px 2px maroon;
 }
 #dra{
-    position: absolute;
-    top: 110px;
-    right: -320px;
+    position: relative;
+    top: -330px;
+    right: -360px;
     width: 320px; 
     font-size: 16px; 
-    font-family: cursive;
+    font-family: 'Courgette', cursive;
+    text-shadow: 2px 2px maroon;
 }
 
 
@@ -317,13 +324,12 @@ h2{
     padding-top: 10px;
     position: relative;
     text-shadow: 3px 3px maroon;
-    width: 1300px;
-    position: absolute;
-      top: 2810px;
-      right: -40px;
+    width: 1500px;
+    position: relative;
+      top: 160px;
+      right: 770px;
       margin-left: 500px;
   
   }
-  
 
   
