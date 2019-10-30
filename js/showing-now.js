@@ -121,3 +121,67 @@ function HeadPic(table) {
 }
 HeadPic(umbrella);
 ////////////////// 
+
+
+
+//////////////////////////////// Reviews ////////////////////////
+
+var newArray = [];
+
+var commentPlace = document.getElementById('comments-field');
+
+function handleSubmit(event) {
+
+    event.preventDefault();
+    // get all the values from the form
+
+    var comments = event.target;
+    var name = comments.name.value;
+    newArray.push(name);
+
+    console.log(' newArray', newArray);
+    setComments();
+    getComments();
+    // getMovies();
+ }// end of event function
+
+ commentPlace.addEventListener('submit', handleSubmit);
+
+ function setComments(){
+    var productStr = JSON.stringify(newArray);
+    localStorage.setItem('Comments', productStr);
+ } // Ending Of 
+
+
+ function getComments(){
+
+    var dataP = localStorage.getItem('Comments');
+    var commentsOrg = JSON.parse(dataP);
+
+    console.log('commentsOrg', commentsOrg);
+
+    var alloutput = document.getElementById('comments-out');
+    alloutput.innerHTML = '';
+
+    for (var i =0;i<newArray.length;i++)
+    {
+        var newComment = newArray[i];
+        addElement('p', alloutput,newComment);
+    }
+ }
+
+ function addElement(tag, container, text) {
+    var element = document.createElement(tag);
+    container.appendChild(element);
+    if (text) {
+        element.textContent = text;
+    }
+    return element;
+ } // Ending Add Element  function
+ 
+
+
+
+
+
+ 

@@ -326,7 +326,12 @@ footer{
  }
  
  
- 
+ #comments-out 
+ {
+
+   color: aqua;
+   font-size: xx-large;
+ }
 
  
  
