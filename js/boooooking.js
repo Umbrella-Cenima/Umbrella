@@ -1,7 +1,8 @@
+ 
 'Use Strict';
 
+var movieForm = document.getElementById('formArea-Movies');
 var movieD = document.getElementById('Movie-Details');
-
 
 
 newArray = [];   /// To show the user data 
@@ -22,6 +23,8 @@ dramaMo = ['DRAMA LIST', 'Joker', 'Gemini Man', 'The Lion King', 'The Irishman',
 // console.log('dramaMo , dramaMo.length : ', dramaMo , dramaMo.length);
 
 
+var moviesNAME ; 
+
 /////////////////////// Constructor Function for movies  ///////////////
 function MoviesKind(name, moviesSelect, seatLoc, seatsNum, payMethod) {
 
@@ -37,16 +40,9 @@ MoviesKind.moviesList = [];                 // Empty array for user choice
 
 //////////// Store the user's data 
 function setUserData() {
-    var moviesString = JSON.stringify(MoviesKind.moviesList);
+    var moviesString = JSON.stringify(newArray);
     localStorage.setItem('movies', moviesString);
 } // Ending of set function 
-
-// function getUserData()
-// {
-
-// }
-
-var movieForm = document.getElementById('formArea-Movies');
 
 function handleSubmit(event) {
 
@@ -56,47 +52,66 @@ function handleSubmit(event) {
     var name = movies.name.value;
 
     //console.log('name ', name);
-    MoviesKind.moviesList.push(name);
+    newArray.push(name);
 
     var moviesSelect = movies.moviesSelect.value;
-    console.log('moviesSelect firt select ', moviesSelect);
+    //console.log('moviesSelect ', moviesSelect);
 
-    MoviesKind.moviesList.push(moviesSelect);
+    if (moviesSelect === "romantic") {
+        // alert('romantic');
+        romanticDRop();                             /// Drop down list for selected type of movies 
+
+    } else if (moviesSelect === "horror") {
+        // alert('horror');
+        horrorDRop();
+
+    } else if (moviesSelect === "comedy") {
+        // alert('comedy');
+        comedyDRop();
+    } else if (moviesSelect === "action") {
+        // alert('action');
+        actionDRop();
+
+    } else if (moviesSelect === "drama") {
+        // alert('drama');
+        dramaDRop();
+
+    } else {
+
+        alert('Please Choose Movie Type');
+    }
+    newArray.push(moviesSelect);
 
     var moviesNAME = movies.moviesNAME.value;
-    MoviesKind.moviesList.push(moviesNAME);
+    newArray.push(moviesNAME);
 
     var seatLoc = movies.seatLoc.value;
     //console.log('seatLoc ', seatLoc);
-    MoviesKind.moviesList.push(seatLoc);
+    newArray.push(seatLoc);
 
     var seatsNum = parseInt(movies.seatsNum.value);
     //console.log('seatsNum ', seatsNum);
-    MoviesKind.moviesList.push(seatsNum);
+    newArray.push(seatsNum);
 
     var payMethod = movies.payMethod.value;
     //console.log('payMethod ', payMethod);
-    MoviesKind.moviesList.push(payMethod);
+    newArray.push(payMethod);
 
-    var loc = new MoviesKind(name, moviesSelect, seatLoc, seatsNum, payMethod);
-    console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
+    new MoviesKind(name, moviesSelect, seatLoc, seatsNum, payMethod);
+    //console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
     console.log(' newArray', newArray);
 
 
 
     // updateMovieName();
-    // localStorage.removeItem("movies");
-    // setUserData();
-    // getUserData();
-    // updateMovieName(moviesSelect);
+    setUserData();
     // renderMovie();
     // getMovies();
 
 
 }// end of event function
 
-
-
+movieForm.addEventListener('submit', handleSubmit);
 //   console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
 
 
@@ -189,43 +204,43 @@ function dramaDRop() {
 
 
 /////// Show up the movies types 
-
 var selectElement = document.getElementById('movieType1');
 
-function handleSelect(event) {
+selectElement.addEventListener('change',
+    function (event) {
 
-    document.getElementById('showorhiddenRomantic').style.display = "inline";
-    event.preventDefault();
-    // get all the values from the form
-    var movies = event.target;
-    console.log('movies : ', movies);
+        document.getElementById('showorhiddenRomantic').style.display = "inline";
+        event.preventDefault();
+        // get all the values from the form
+        var movies = event.target;
+        console.log('movies : ', movies);
 
-    var moviesSelect = movies.value;
-    //console.log('moviesSelect ', moviesSelect);
+        var moviesSelect = movies.value;
+        console.log('moviesSelect ', moviesSelect);
 
-    if (moviesSelect === 'romantic') {
-        romanticDRop();
-    } else if (moviesSelect === 'comedy') {
-        comedyDRop();
-    } else if (moviesSelect === 'action') {
-        actionDRop();
-    } else if (moviesSelect === 'horror') {
-        horrorDRop();
-    } else if (moviesSelect === 'drama') {
-        dramaDRop();
-    } else {
-        alert(' Please choose Movies Type ');
-    }
+        if (moviesSelect === 'romantic') {
+            romanticDRop();
+        } else if (moviesSelect === 'comedy') {
+            comedyDRop();
+        } else if (moviesSelect === 'action') {
+            actionDRop();
+        } else if (moviesSelect === 'horror') {
+            horrorDRop();
+        } else if (moviesSelect === 'drama') {
+            dramaDRop();
+        } else {
+            alert(' Please choose Movies Type ');
+        }
 
-}
-selectElement.addEventListener('change', handleSelect);
-
+    },
+    false
+);
 
 
 ////////////////////////////////////// User Movie Choice & Seat Counter  /////////////////////////////////////////////////////////////
 
 ////////// Constructor Function for movie name ////////
-function MoviesNameSeatNum(name, src, cinemaName, Moviedate) {
+function MoviesNameSeatNum(name, src,cinemaName,Moviedate) {
 
     this.name = name;
     this.src = src;
@@ -234,42 +249,42 @@ function MoviesNameSeatNum(name, src, cinemaName, Moviedate) {
 
     this.seatCounter = 0;
 
-
+   
 
     MoviesNameSeatNum.moviesNameSeatList.push(this);
 }
 
 MoviesNameSeatNum.moviesNameSeatList = [];
 
-new MoviesNameSeatNum('After', 'moviesNameImg/After.jpg', 'Taj Cinema', ' At 4:00 PM');
-new MoviesNameSeatNum('Downton Abbey', 'moviesNameImg/Downton Abbey.jpg', 'Grand Cinema', 'At 4:00 PM');
-new MoviesNameSeatNum('Maleficent', 'moviesNameImg/Maleficent.jpg', 'Prime Cinema', 'At 4:00 PM');
-new MoviesNameSeatNum('Aladdin', 'moviesNameImg/Aladdin.jpg', 'City Cinema', 'At 8:00 PM');
-new MoviesNameSeatNum('Judy (II)', 'moviesNameImg/Judy.jpg', 'Abdali Cinema', 'At 8:00 PM');
+new MoviesNameSeatNum('After', 'moviesNameImg/After.jpg','Taj Cinema',' At 4:00 PM');
+new MoviesNameSeatNum('Downton Abbey', 'moviesNameImg/Downton Abbey.jpg','Grand Cinema' , 'At 4:00 PM');
+new MoviesNameSeatNum('Maleficent', 'moviesNameImg/Maleficent.jpg','Prime Cinema' , 'At 4:00 PM');
+new MoviesNameSeatNum('Aladdin', 'moviesNameImg/Aladdin.jpg','City Cinema' , 'At 8:00 PM');
+new MoviesNameSeatNum('Judy (II)', 'moviesNameImg/Judy.jpg','Abdali Cinema' , 'At 8:00 PM');
 
-new MoviesNameSeatNum('The Exorcist', 'moviesNameImg/The Exorcist.jpg', 'Taj Cinema', ' At 6:00 PM');
-new MoviesNameSeatNum('Psycho', 'moviesNameImg/Psycho.jpg', 'Grand Cinema', 'At 6:00 PM');
-new MoviesNameSeatNum('Halloween', 'moviesNameImg/Halloween.jpg', 'Prime Cinema', 'At 6:00 PM');
-new MoviesNameSeatNum('The Thing', 'moviesNameImg/The Thing.png', 'City Cinema', 'At 10:00 PM');
-new MoviesNameSeatNum('The Fly', 'moviesNameImg/The Fly.jpg', 'Abdali Cinema', 'At 10:00 PM');
+new MoviesNameSeatNum('The Exorcist', 'moviesNameImg/The Exorcist.jpg','Taj Cinema',' At 6:00 PM');
+new MoviesNameSeatNum('Psycho', 'moviesNameImg/Psycho.jpg','Grand Cinema' , 'At 6:00 PM');
+new MoviesNameSeatNum('Halloween', 'moviesNameImg/Halloween.jpg','Prime Cinema' , 'At 6:00 PM');
+new MoviesNameSeatNum('The Thing', 'moviesNameImg/The Thing.png','City Cinema' , 'At 10:00 PM');
+new MoviesNameSeatNum('The Fly', 'moviesNameImg/The Fly.jpg','Abdali Cinema' , 'At 10:00 PM');
 
-new MoviesNameSeatNum('Death at a Funeral', 'moviesNameImg/Death at a Funeral.jpg', 'Taj Cinema', ' At 8:00 PM');
-new MoviesNameSeatNum('Step Brothers', 'moviesNameImg/Step Brothers.jpg', 'Grand Cinema', 'At 8:00 PM');
-new MoviesNameSeatNum('The Hangover', 'moviesNameImg/The Hangover.jpg', 'Prime Cinema', 'At 8:00 PM');
-new MoviesNameSeatNum('Superbad', 'moviesNameImg/Superbad.jpg', 'City Cinema', 'At 12:00 AM');
-new MoviesNameSeatNum('Project X', 'moviesNameImg/Project X.jpg', 'Abdali Cinema', 'At 12:00 AM');
+new MoviesNameSeatNum('Death at a Funeral', 'moviesNameImg/Death at a Funeral.jpg','Taj Cinema',' At 8:00 PM');
+new MoviesNameSeatNum('Step Brothers', 'moviesNameImg/Step Brothers.jpg','Grand Cinema' , 'At 8:00 PM');
+new MoviesNameSeatNum('The Hangover', 'moviesNameImg/The Hangover.jpg','Prime Cinema' , 'At 8:00 PM');
+new MoviesNameSeatNum('Superbad', 'moviesNameImg/Superbad.jpg','City Cinema' , 'At 12:00 AM');
+new MoviesNameSeatNum('Project X', 'moviesNameImg/Project X.jpg','Abdali Cinema' , 'At 12:00 AM');
 
-new MoviesNameSeatNum('The Equalizer', 'moviesNameImg/The Equalizer.jpg', 'Taj Cinema', ' At 10:00 PM');
-new MoviesNameSeatNum('Logan', 'moviesNameImg/Logan.jpg', 'City Cinema', 'At 4:00 PM');
-new MoviesNameSeatNum('The Avengers', 'moviesNameImg/The Avengers.jpg', 'Grand Cinema', 'At 10:00 PM');
-new MoviesNameSeatNum('Captain Marvel', 'moviesNameImg/Captain Marvel.jpg', 'Prime Cinema', 'At 10:00 PM');
-new MoviesNameSeatNum('Black Panther', 'moviesNameImg/Black Panther.jpg', 'Abdali Cinema', 'At 4:00 PM');
+new MoviesNameSeatNum('The Equalizer', 'moviesNameImg/The Equalizer.jpg','Taj Cinema',' At 10:00 PM');
+new MoviesNameSeatNum('Logan', 'moviesNameImg/Logan.jpg','City Cinema' , 'At 4:00 PM');
+new MoviesNameSeatNum('The Avengers', 'moviesNameImg/The Avengers.jpg','Grand Cinema' , 'At 10:00 PM');
+new MoviesNameSeatNum('Captain Marvel', 'moviesNameImg/Captain Marvel.jpg','Prime Cinema' , 'At 10:00 PM');
+new MoviesNameSeatNum('Black Panther', 'moviesNameImg/Black Panther.jpg','Abdali Cinema' , 'At 4:00 PM');
 
-new MoviesNameSeatNum('Joker', 'moviesNameImg/Joker.jpg', 'Taj Cinema', ' At 12:00 AM');
-new MoviesNameSeatNum('Gemini Man', 'moviesNameImg/Gemini Man.jpg', 'Grand Cinema', 'At 12:00 AM');
-new MoviesNameSeatNum('The Lion King', 'moviesNameImg/The Lion King.jpg', 'Prime Cinema', 'At 12:00 AM');
-new MoviesNameSeatNum('The Irishman', 'moviesNameImg/The Irishman.jpg', 'City Cinema', 'At 6:00 PM');
-new MoviesNameSeatNum('IT 2', 'moviesNameImg/IT2.jpg', 'Abdali Cinema', 'At 6:00 PM');
+new MoviesNameSeatNum('Joker', 'moviesNameImg/Joker.jpg','Taj Cinema',' At 12:00 AM');
+new MoviesNameSeatNum('Gemini Man', 'moviesNameImg/Gemini Man.jpg','Grand Cinema' , 'At 12:00 AM');
+new MoviesNameSeatNum('The Lion King', 'moviesNameImg/The Lion King.jpg','Prime Cinema' , 'At 12:00 AM');
+new MoviesNameSeatNum('The Irishman', 'moviesNameImg/The Irishman.jpg','City Cinema' , 'At 6:00 PM');
+new MoviesNameSeatNum('IT 2', 'moviesNameImg/IT2.jpg','Abdali Cinema' , 'At 6:00 PM');
 
 
 MoviesNameSeatNum.container = document.getElementById('movieImage');
@@ -279,6 +294,49 @@ MoviesNameSeatNum.middleImage = document.getElementById('movie-image');
 MoviesNameSeatNum.middleTitle = document.getElementById('movie-title');
 
 MoviesNameSeatNum.middleObject = null;
+
+
+function updateMovieName(moviesSelect) {
+
+
+    //console.log(' update movie name ' ,moviesSelect );
+    var dataP = localStorage.getItem('MoviesName');
+    var ProductData = JSON.parse(dataP);
+
+    var dataPpp = localStorage.getItem('movies');
+    var ProductDataaa = JSON.parse(dataPpp);
+
+    var alloutput = document.getElementById('Movie-sentences');
+
+    alloutput.innerHTML = '';
+
+    console.log('newarray : ', newArray);
+
+    for (var i =0;i<ProductData.length;i++)
+    {
+        // var userData = MoviesKind.moviesList;
+        
+        var newMovie = MoviesNameSeatNum.moviesNameSeatList[i];
+        //console.log('newMovies : ', newMovie);
+        if (newMovie.name === moviesSelect )
+        {
+            addElement('li', alloutput,'Your Name : ' + ProductDataaa[0] )
+            addElement('li', alloutput,'Movie Kind : ' + ProductDataaa[1] )
+            addElement('li', alloutput,'Movie Name : ' + ProductDataaa[2] )
+            addElement('li', alloutput,'Seat Class : ' + ProductDataaa[3] )
+            addElement('li', alloutput,'Number Of Seats : ' + ProductDataaa[4] )
+            addElement('li', alloutput,'Payment Method : ' + ProductDataaa[5] )
+            addElement('li', alloutput,'Cinema Name : ' + newMovie.cinemaName )
+            addElement('li', alloutput,'Time : ' + newMovie.Moviedate )
+
+
+        }
+       
+       
+    }
+       
+} // Ending Total Updates product function 
+
 
 
 function addElement(tag, container, text) {
@@ -300,109 +358,34 @@ function setMoviesNames() {
 
 setMoviesNames();
 
-function getUserData(moviesSelect) {
-    
-    var dataP = localStorage.getItem('movies');
-    var ProductData = JSON.parse(dataP);
-
-    console.log(' ProductData in user data  : ', ProductData);
-    console.log(' moviesSelect in user data : ', moviesSelect);
-    // getMovies(moviesSelect);
-
-    var dataP = localStorage.getItem('MoviesName');
-    var ProductData = JSON.parse(dataP);
-
-    var alloutput = document.getElementById('Movie-sentences');
-
-    var movieNameImg = document.getElementById('movie-image');
-    var movieNameTilte = document.getElementById('movie-title');
-
-    movieNameImg.innerHTML = '';
-    if (ProductData) {
-        console.log('Product data Name ', ProductData);
-
-        for (var i = 0; i < ProductData.length; i++) {
-            // console.log('Product data Name ', ProductData.length);
-            var arrayIndex = ProductData[i];
-
-            var newMovie = MoviesNameSeatNum.moviesNameSeatList[i];
-
-            if (arrayIndex.name === moviesSelect) {
-                console.log(' arrayIndex.name',arrayIndex.name );
-                movieNameImg.setAttribute('src', arrayIndex.src);
-                movieNameTilte.textContent = arrayIndex.name;
-                addElement('li', alloutput, 'Your Name : ' + newArray[0])
-                addElement('li', alloutput, 'Movie Kind : ' + ProductData[1])
-                addElement('li', alloutput, 'Movie Name : ' + ProductData[2])
-                addElement('li', alloutput, 'Seat Class : ' + ProductData[3])
-                addElement('li', alloutput, 'Number Of Seats : ' + ProductData[4])
-                addElement('li', alloutput, 'Payment Method : ' + ProductData[5])
-                addElement('li', alloutput, 'Cinema Name : ' + newMovie.cinemaName)
-                addElement('li', alloutput, 'Time : ' + newMovie.Moviedate)
-            }
-
-        }
-        // updateMovieName(moviesSelect);
-        // setMoviesNames();
-
-    } else {
-
-        alert(' nothing here ');
-    }
-
-} // Ending of function getUserData
 
 function getMovies(moviesSelect) {
 
-    console.log('newArray : ', newArray);
-    console.log(' moviesSelect for get movies  ', moviesSelect);
-
     var dataP = localStorage.getItem('MoviesName');
     var ProductData = JSON.parse(dataP);
-    //console.log(' ProductData for get movies ', ProductData);
-
-    var dataPpp = localStorage.getItem('movies');
-    var ProductDataaa = JSON.parse(dataPpp);
-    console.log(' ProductDataaa for get movies ', ProductDataaa);
-
-
-    var alloutput = document.getElementById('Movie-sentences');
 
     var movieNameImg = document.getElementById('movie-image');
     var movieNameTilte = document.getElementById('movie-title');
 
     movieNameImg.innerHTML = '';
 
-
-    //console.log('moviesSelect get ', moviesSelect);
+    
+    console.log('moviesSelect get ', moviesSelect);
 
     if (ProductData) {
-        console.log('Product data Name ', ProductData);
+        // console.log('Product data Name ', ProductData);
 
         for (var i = 0; i < ProductData.length; i++) {
-            // console.log('Product data Name ', ProductData.length);
+        // console.log('Product data Name ', ProductData.length);
             var arrayIndex = ProductData[i];
 
-            var newMovie = MoviesNameSeatNum.moviesNameSeatList[i];
-
             if (arrayIndex.name === moviesSelect) {
-                console.log(' arrayIndex.name',arrayIndex.name );
                 movieNameImg.setAttribute('src', arrayIndex.src);
                 movieNameTilte.textContent = arrayIndex.name;
-                addElement('li', alloutput, 'Your Name : ' + newArray[0])
-                addElement('li', alloutput, 'Movie Kind : ' + newArray[1])
-                addElement('li', alloutput, 'Movie Name : ' + newArray[2])
-                addElement('li', alloutput, 'Seat Class : ' + newArray[3])
-                addElement('li', alloutput, 'Number Of Seats : ' + newArray[4])
-                addElement('li', alloutput, 'Payment Method : ' + newArray[5])
-                addElement('li', alloutput, 'Cinema Name : ' + newMovie.cinemaName)
-                addElement('li', alloutput, 'Time : ' + newMovie.Moviedate)
             }
 
         }
         // updateMovieName(moviesSelect);
-        // setMoviesNames();
-
     } else {
 
         alert(' nothing here ');
@@ -416,8 +399,6 @@ function getMovies(moviesSelect) {
 
 var selectElement = document.getElementById('items');
 console.log(' selectElement', selectElement);
-
-movieForm.addEventListener('submit', handleSubmit);
 
 selectElement.addEventListener('change',
     function (event) {
@@ -438,8 +419,8 @@ selectElement.addEventListener('change',
             case "Judy (II)":
                 // alert('ROMANTIC Movie Name ');
                 // renderRomanticMovie(moviesSelect);
-                getMovies(moviesSelect);              // updateMovieName(moviesSelect);
-                // // updateMovieName(moviesSelect);
+                getMovies(moviesSelect);
+                updateMovieName(moviesSelect);
                 break;
 
             case "The Exorcist":
@@ -448,8 +429,9 @@ selectElement.addEventListener('change',
             case "The Thing":
             case "The Fly":
                 // alert('HORROR Movie Name ');
-                // getMovies(moviesSelect);
-                // updateMovieName(moviesSelect);
+                getMovies(moviesSelect);
+                updateMovieName(moviesSelect);
+
                 break;
 
             case "Death at a Funeral":
@@ -458,8 +440,9 @@ selectElement.addEventListener('change',
             case "Superbad":
             case "Project X":
                 // alert('COMEDY Movie Name ');
-                // getMovies(moviesSelect);
-                // updateMovieName(moviesSelect);
+                getMovies(moviesSelect);
+                updateMovieName(moviesSelect);
+
                 break;
 
             case "The Equalizer":
@@ -468,8 +451,9 @@ selectElement.addEventListener('change',
             case "Captain Marvel":
             case "Black Panther":
                 // alert('ACTION Movie Name ');
-                // getMovies(moviesSelect);
-                // updateMovieName(moviesSelect);
+                getMovies(moviesSelect);
+                updateMovieName(moviesSelect);
+
                 break;
 
             case "Joker":
@@ -478,8 +462,9 @@ selectElement.addEventListener('change',
             case "The Irishman":
             case "IT 2":
                 // alert('DRAMA Movie Name ');
-                // getMovies(moviesSelect);
-                // updateMovieName(moviesSelect);
+                getMovies(moviesSelect);
+                updateMovieName(moviesSelect);
+
                 break;
 
 
@@ -488,3 +473,37 @@ selectElement.addEventListener('change',
     },
     false
 );
+
+
+// function renderRomanticMovie(moviesSelect) {
+
+//     var movieNameImg = document.getElementById('movie-image');
+//     var movieNameTilte = document.getElementById('movie-title');
+
+//     movieNameImg.innerHTML = '';
+//     // for (var i = 0; i < newArray.length; i++) {
+//     // var all = newArray[i];
+
+//     for (var i = 0; i < MoviesNameSeatNum.moviesNameSeatList.length; i++)
+//     {
+
+//         if (MoviesNameSeatNum.moviesNameSeatList[i].name == moviesSelect)
+//         {
+//             movieNameImg.setAttribute('src',MoviesNameSeatNum.moviesNameSeatList[i].src);
+//             movieNameTilte.textContent = MoviesNameSeatNum.moviesNameSeatList[i].name;
+//         }else
+//         {
+//             alert('Wrong Movie');
+//         }
+
+// console.log(' MoviesNameSeatNum.moviesNameSeatList[i].name',MoviesNameSeatNum.moviesNameSeatList[i].name );
+//     }
+
+
+    // var element = document.createElement('p');
+    // movieNameImg.appendChild(element);
+    // element.textContent = moviesSelect;
+
+    // }
+// Ending of renderMovie() function 
+

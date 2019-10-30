@@ -111,7 +111,10 @@ body{
   #currentlink {
      pointer-events: pointer;
      cursor: default;
-     color: #3399FF;
+     color: rgb(255, 255, 255);
+     font-family: 'Courgette', cursive;
+     text-shadow: 1px 1px maroon;
+
   }
   nav a:link {
      color: white;
@@ -131,9 +134,9 @@ body{
     text-align: center;
     font-family: unset;
     color: white;
-    font-size: 35ox;
+    font-size: 35px;
     text-shadow: 5px 5px maroon;
-    font-family: 'Courgette', cursive;
+    font-family: Papyrus, fantasy;
 
   }
 
@@ -156,10 +159,10 @@ body{
 
 legend {
    color: rgb(248, 246, 246);
-   background-color:rgb(8, 8, 8);
-   border: 1px solid rgb(77, 4, 4);
+   text-shadow: 1px 1px maroon;
    border-radius: 20px;
-   font-family: 'Courgette', cursive;
+   font: 24px Papyrus, fantasy;
+   font-style: italic;
 
    
  }
@@ -181,11 +184,12 @@ input[type=number] {
 }
 
 #formArea-Movies button {
-   border: 3px dotted rgb(226, 171, 226) ;
+   /* border: 3px outset rgb(255, 255, 255) ; */
    padding: 25px;
-   background: maroon;
+   background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/dpmDSBWkWGFebViZKJuG7/c488da0a5c57abcaf6dcade349d14347/Feature-Hub-Copy-compressor.png');
    color: #fff;
-   border-radius: 30px;
+   text-shadow: 2px 2px maroon;
+   border-radius: 20px;
    font-size: 18px;
    margin-top: 10px;
    margin-bottom: 10px;
@@ -193,11 +197,15 @@ input[type=number] {
    transition: 350ms;
    cursor: pointer;
    font-family: Georgia;
-   font-style: oblique;
+   font-family: 'Courgette', cursive;
+   position: relative;
+   top: -130px;
+   left: 360px;
+  
   }
  
  button:hover {
-   background: orchid;
+   background: rgb(0, 0, 0);
  }
 
  /* ////// Movie List ///// */
@@ -212,18 +220,20 @@ input[type=number] {
 
  .Time-Button button {
 
-   color: mediumspringgreen;
-   border: 3px solid white ;
-   border-radius: 8px;
-   width: 100%;
+   color: rgb(253, 255, 254);
+   border: 3px solid rgb(255, 255, 255) ;
+   border-radius: 20px;
+   width: 900px;
    padding: 10px;
-   background: maroon;
-   color: rgb(13, 218, 139);
+   background: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
+   text-shadow:2px 2px maroon;
    font-size: x-large;
-   font-family: Georgia;
-   font-style: oblique;
+   font-family: 'Courgette', cursive;   
    margin-top: 15px;
    margin-bottom: 10px;
+   cursor: pointer;
+  
    
  }
 
@@ -262,17 +272,17 @@ footer{
   border: 0.5px solid rgb(197, 11, 11);
   border-radius: 20px;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;;
+  font-family: 'Courgette', cursive;
   display: block;
   min-height: 50px;
   padding-top: 10px;
   position: relative;
   text-shadow: 3px 3px maroon;
-  width: 1000px;
-  position: absolute;
-    top: 2810px;
-    right: 200px;
-    margin-left: 500px;
+  width: 1400px;
+  position: relative;
+    top: 210px;
+    right: 250px;
+    width: 1350;
 }
 
 #Movie-Details {
@@ -294,12 +304,13 @@ h3 {
 
 #movieImage {
 
-  color: rgb(10, 201, 58);
+  color: rgb(255, 255, 255);
   font-size: x-large;
+  text-shadow: maroon;
   text-align: center;
   margin-top: 50px;
-  border: 5px solid white;
   border-radius: 10px;
+  font-family: 'Courgette', cursive;
 
 }
 #movie-image {
@@ -307,12 +318,19 @@ h3 {
   width: 200px;
 }
 
-#ticketD {
+/* #ticketD {
 
   border-bottom: 3px dashed blue;
   border-radius: 30px;
-}
+} */
 #movieType1{
   position: relative;
   right: -200px;
+}
+#demo{
+  font-family: 'Courgette', cursive;
+  color: #fff;
+  font-size: 20px;
+  border-color: white;
+  text-shadow: 1px 1px maroon;
 }
