@@ -4,9 +4,7 @@
 <head>
 
     <title>Booking A Movie Ticket </title>
-    <link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker%7CSrisakdi&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Booking.css">
     <!-- <link rel="stylesheet" href="css/HomePage.css"> -->
 
@@ -61,26 +59,26 @@
             </nav>
 
             </header>
-
-
+            <br>
+            <hr width="900px" color="gray">
+            <hr width="900px" color="gray">
+            <hr width="900px" color="gray">
             <main>
 
-                <h1> Book a Ticket For Your chosen Movie </h1>
-
-
+                <h1> Book a Ticket </h1>
                 <form id="formArea-Movies">
                     <!-- fieldset : to group all information in one place as you like to divided your web pages  -->
                     <fieldset>
                         <!-- legend: to heading some info together  , every single text input -->
                         <legend> The Needed Information To Book A Ticket </legend><br></br>
 
-                        <label>Your Name</label>
-                        <input type="text" name="name" placeholder='Enter Your First Name'>
+                        <label> Your Name : </label>
+                        <input type="text" name="name" placeholder='Type Here'>
                         <br></br><br>
 
                         <!-- label & input : to add the text input for each one  -->
-                        <label> Choose The Movie :</label>
-                        <select name="moviesSelect" size="1">
+                        <label> Movies Type : </label>
+                        <select id="movieType1" name="moviesSelect" size="1">
                             <option value="Empty">-------</option>
                             <option value="romantic">Romantic</option>
                             <option value="horror">Horror</option>
@@ -88,59 +86,77 @@
                             <option value="action">Action</option>
                             <option value="drama">Drama</option>
 
+
                         </select><br></br><br>
 
-                        <label> Pick Your Favorite Seat Type : </label>
-                        <select name="seatKind" size="1">
-                            <option value="Empty">-------</option>
-                            <option value="a"> A </option>
-                            <option value="b"> B </option>
-                            <option value="c"> C </option>
-                            <option value="d"> D </option>
-                            <option value="f"> F </option>
-                            <option value="vip"> VIP </option>
-                        </select><br></br><br>
+                        <label id="showorhiddenRomantic">
+                            <span> Movies list : </span>
+                            <select id="items" name="moviesNAME"></select>
+                        </label>
+                        <br></br><br>
 
-                        <label> Choose How many Seats You Want </label>
-                        <input type="number" name="seatsNum" placeholder="Enter Any Number (as maximum 3 ONLY)"
-                            style="width:300px"><br></br><br>
+                        <label > Seat Class : </label>
+                        <input style="width: 200px;" type="text" name="seatLoc" placeholder='Type Here'>
+                        <a style="color: red; padding-left: 15px;" href="seatsLayout.html">Click
+                        </a>
+
+                        <br></br><br>
+
+
+                        <label> Seats Number : </label>
+                        <input type="number" name="seatsNum" placeholder="Type Here" style="width:300px"><br></br><br>
                         <!-- <span>list the average by using colon </span> -->
+
+                        <label> Payment Method : </label>
+                        <select name="payMethod" size="1">
+                            <option value="Empty">-------</option>
+                            <option value="cash"> Cash </option>
+                            <option value="visa-card"> Visa Card</option>
+                            <option value="paypal"> Paypal </option>
+                            <option value="direct-deposit"> Direct Deposit </option>
+                            <option value="ewallets"> Ewallets </option>
+                        </select><br></br><br>
+
+
                     </fieldset>
                     <br></br>
                     <button type="submit"> Click To Buy A Ticket </button>
                 </form>
 
+
+                <section id="ticketD">
+                        <h1> Your Ticket Details </h1>
+                        <p id="Movie-Details">
+    
+                        </p>
+                    </section>
+    
+                    <section id="movieImage">
+    
+                        <ul id="Movie-sentences" style="color: cyan;font-size:x-large;">
+    
+                        </ul>
+    
+                        <div>
+                            <img id="movie-image" src="images/Umbrella.jpg" alt="movImg">
+                            <h2 id="movie-title">Title here</h2>
+                        </div>
+    
+    
+                    </section>
                 <!-- Time Button -->
                 <div class="Time-Button">
                     <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
                         Click me to display Date and Time.</button>
-
                     <p id="demo"></p>
                 </div>
-
-
-                <section>
-                    <h3> The Movie Details </h3>
-                    <p id="Movie-Details">
-
-                    </p>
-                </section>
-
-
-
-                <section id="cinemaSeat">
-                  
-
-
-                  </section>
             </main>
 
+            <footer>
+                <p style="font-size: 19px; font-family: 'Courgette', cursive;"> copyright Umbrella @ 2019</p>
+            </footer>
 
-
-            <footer> copyright Umbrella @ 2019 </footer>
             <script src="js/Booking.js"></script>
-                <script src="js/Booking-Update.js"></script>
-
 
 </body>
 
