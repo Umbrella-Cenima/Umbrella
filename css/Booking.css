@@ -1,0 +1,336 @@
+body{
+    background-image: url('https://www.quantumblack.com/static/hero-home-66ad0082c5fa59b705aec799685a5a5e-6ded7.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   
+ }
+  
+ /* The Header Styling  */
+ 
+ header {
+     background-color: black;
+     border: 0.5px solid rgb(197, 11, 11);
+     border-radius: 20px;
+     margin-bottom: 50px;
+     color: maroon;
+     font: 28px Papyrus, fantasy;
+     min-width: 924px;
+     display: block;
+     min-height: 120px;
+     margin-top: -3px;
+     position: relative;
+     left: -5px;
+  }
+ 
+  h1 {
+     margin-right: 20px;
+  }
+  #bannerimage {
+     float: left;
+     width: 100px;
+     text-align: right;
+  }
+  #bannerjpg {
+    position: relative;
+    left: 25%;
+  }
+  #bannerimage + div {
+     text-align: right;
+  }
+  #bannerimage img {
+     height: 100px;
+     width: 100px;
+     transform: rotateY(0deg);
+     transition: transform 3s;
+  }
+  #bannerimage img:hover {
+     transform: rotateY(360deg);
+     border: hidden;
+  }
+  #bannerlogo {
+     margin-right: 0;
+  }
+  .homelink {
+     color: maroon;
+     text-shadow: 3px 3px white;
+     text-decoration: none;
+     font-style: italic;
+  }
+  .transluscent-mat {
+     width: 916px;
+     margin: auto;
+     padding-top: 0.1px;
+  }
+ 
+  #search input:focus {
+     background-color: rgb(151, 151, 145);
+  }
+  div[id="search"] a{
+     color: silver;
+     font-family: Papyrus, fantasy;
+     text-decoration: none;
+ 
+  }
+  div[id="search"] form{
+     position: relative;
+     left: -40px;
+     top: -3px;
+  }
+  div p {
+     color: white;
+     font: 14px 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+     padding-left: 17px;
+ }
+ 
+ 
+ /* The Navigation Styling  */
+ 
+ .navigation {
+     position: relative;
+     left: -3.9%;
+     margin-top: -5px;
+     margin-bottom: 10px;
+     width: 960px;
+     overflow: hidden;
+  }
+  .nav {
+     display: inline-block;
+     color: white;
+     background-color: black;
+     border: 2px rgb(156, 11, 11) solid;
+     border-radius: 30px;
+     width: 125px;
+     text-align: center;
+     padding: 10px;
+     position: relative;
+     left: -3.5px;
+     box-shadow: 1px 1px 1px black;
+  }
+ 
+  #currentlink {
+     pointer-events: pointer;
+     cursor: default;
+     color: rgb(255, 255, 255);
+     font-family: 'Courgette', cursive;
+     text-shadow: 1px 1px maroon;
+
+  }
+  nav a:link {
+     color: white;
+     text-decoration: none;
+  }
+  nav a:visited {
+     color: white;
+     text-decoration: none;
+  }
+  nav a:hover {
+     color: maroon;
+     text-decoration: none;
+  }
+
+  main h1 {
+
+    text-align: center;
+    font-family: unset;
+    color: white;
+    font-size: 35px;
+    text-shadow: 5px 5px maroon;
+    font-family: Papyrus, fantasy;
+
+  }
+
+
+  /* Forms CSS  */
+  fieldset {
+   border: 2px solid rgb(241, 237, 237);
+   border-radius: 20px;
+   /* margin-top: 30px; */
+   font-family: unset;
+   padding: 20px;
+   font-size: x-large;
+   font-style: oblique;
+   background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/dpmDSBWkWGFebViZKJuG7/c488da0a5c57abcaf6dcade349d14347/Feature-Hub-Copy-compressor.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: thistle;
+}
+
+legend {
+   color: rgb(248, 246, 246);
+   text-shadow: 1px 1px maroon;
+   border-radius: 20px;
+   font: 24px Papyrus, fantasy;
+   font-style: italic;
+
+   
+ }
+
+ input[type=text]{
+   border: 3px solid rgb(10, 10, 9);
+   cursor: pointer;
+   padding: 15px;
+   align-self: center;
+   width: 250px;
+}
+
+input[type=number] {
+   border: 3px solid rgb(3, 3, 3);
+   cursor: pointer; 
+   padding: 15px;
+   align-self: center;
+   width: 250px;
+}
+
+#formArea-Movies button {
+   /* border: 3px outset rgb(255, 255, 255) ; */
+   padding: 25px;
+   background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/dpmDSBWkWGFebViZKJuG7/c488da0a5c57abcaf6dcade349d14347/Feature-Hub-Copy-compressor.png');
+   color: #fff;
+   text-shadow: 2px 2px maroon;
+   border-radius: 20px;
+   font-size: 18px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 330px;
+   transition: 350ms;
+   cursor: pointer;
+   font-family: Georgia;
+   font-family: 'Courgette', cursive;
+   position: relative;
+   top: -130px;
+   left: 360px;
+  
+  }
+ 
+ button:hover {
+   background: rgb(0, 0, 0);
+ }
+
+ /* ////// Movie List ///// */
+
+ select  {
+
+   border: 3px solid rgb(3, 3, 3);
+   cursor: pointer; 
+   padding: 15px;
+   width: 300px;
+ }
+
+ .Time-Button button {
+
+   color: rgb(253, 255, 254);
+   border: 3px solid rgb(255, 255, 255) ;
+   border-radius: 20px;
+   width: 900px;
+   padding: 10px;
+   background: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
+   text-shadow:2px 2px maroon;
+   font-size: x-large;
+   font-family: 'Courgette', cursive;   
+   margin-top: 15px;
+   margin-bottom: 10px;
+   cursor: pointer;
+  
+   
+ }
+
+ .Time-Button p {
+
+   color: rgb(13, 218, 139);
+   text-align: center;
+   font-weight: bold;
+   border: 0.5px solid rgb(197, 11, 11);
+   border-radius: 20px;
+   font-size: x-large;
+ }
+
+ .navigation2 {
+   position: relative;
+   left: -3.9%;
+   margin-top: -5px;
+   margin-bottom: 10px;
+   width: 960px;
+   overflow: hidden;
+}
+.nav2 {
+   display: inline-block;
+   color: white;
+   font-size: 12px;
+   width: 135px;
+   /* text-align: center; */
+   /* padding: 10px; */
+   position: relative;
+   right: -100px;
+}
+footer{
+  text-align: center;
+  font-size: 24px;
+  background-color: black;
+  border: 0.5px solid rgb(197, 11, 11);
+  border-radius: 20px;
+  color: white;
+  font-family: 'Courgette', cursive;
+  display: block;
+  min-height: 50px;
+  padding-top: 10px;
+  position: relative;
+  text-shadow: 3px 3px maroon;
+  width: 1400px;
+  position: relative;
+    top: 210px;
+    right: 250px;
+    width: 1350;
+}
+
+#Movie-Details {
+
+color: white;   
+}
+
+h3 {
+
+   color: white;
+}
+
+/* Do Not touch this ID  */
+#showorhiddenRomantic {
+
+  display: none;
+}
+
+
+#movieImage {
+
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+  text-shadow: maroon;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-family: 'Courgette', cursive;
+
+}
+#movie-image {
+
+  width: 200px;
+}
+
+/* #ticketD {
+
+  border-bottom: 3px dashed blue;
+  border-radius: 30px;
+} */
+#movieType1{
+  position: relative;
+  right: -200px;
+}
+#demo{
+  font-family: 'Courgette', cursive;
+  color: #fff;
+  font-size: 20px;
+  border-color: white;
+  text-shadow: 1px 1px maroon;
+}
