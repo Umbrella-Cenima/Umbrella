@@ -71,6 +71,18 @@ function handleSubmit(event) {
     //console.log('seatsNum ', seatsNum);
     MoviesKind.moviesList.push(seatsNum);
 
+    if (seatsNum >= maxSeatNum)
+    {
+        alert('Sorry , Tickets Sold Out , Choose Another Movie');
+    }else 
+    {
+        var total = maxSeatNum - seatsNum;
+        //console.log('total ', total);
+
+        alert(' Left Tickets For ' + moviesNAME + ' Movie is : ' + total);
+
+    }
+
     // this.seatCounter = seatsNum;
 
     var payMethod = movies.payMethod.value;
@@ -86,21 +98,15 @@ function handleSubmit(event) {
     localStorage.removeItem('movies');
     setUserData();
     getUserData(moviesNAME);
-
-    if (seatsNum >= maxSeatNum)
-    {
-        alert('Sorry , Tickets Sold Out , Choose Another Movie');
-    }else 
-    {
-        var total = maxSeatNum-this.seatsNum;
-        alert(' Left Tickets For This Movie : ' + total);
-
-    }
    
    
 }// end of event function
 
-
+function getRandomProduct() {
+    var index = Math.floor(Math.random() * 100);
+    //console.log('index', index);
+    return index;
+  }  // Ending random product function
 
 /***************************** Drop Down list for different kinds of movies  **************************************/
 
@@ -327,6 +333,7 @@ function getUserData(moviesNAME) {
                 //console.log(' arrayIndex.name',arrayIndex.name );
                 movieNameImg.setAttribute('src', arrayIndex.src);
                 movieNameTilte.textContent = arrayIndex.name;
+                addElement('li', alloutput, 'Your Ticket Number is  : ' + getRandomProduct());
                 addElement('li', alloutput, 'Your Name : ' + MoviesKind.moviesList[0])
                 addElement('li', alloutput, 'Movie Kind : ' + MoviesKind.moviesList[1])
                 addElement('li', alloutput, 'Movie Name : ' + MoviesKind.moviesList[2])
