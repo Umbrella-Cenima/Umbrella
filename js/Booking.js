@@ -1,10 +1,10 @@
 'Use Strict';
 
-var movieD = document.getElementById('Movie-Details');
-
+var movieD = document.getElementById('Movie-Details');  /// To show up customer's selection 
 
 
 newArray = [];   /// To show the user data 
+
 
 romanticMo = ['ROMANTIC LIST', 'After', 'Downton Abbey', 'Maleficent', 'Aladdin', 'Judy (II)'];
 //console.log('romanticMo , romanticMo.length : ', romanticMo, romanticMo.length);
@@ -21,8 +21,9 @@ actionMo = ['ACTION LIST', 'The Equalizer', 'Logan', 'The Avengers', 'Captain Ma
 dramaMo = ['DRAMA LIST', 'Joker', 'Gemini Man', 'The Lion King', 'The Irishman', 'IT 2'];
 // console.log('dramaMo , dramaMo.length : ', dramaMo , dramaMo.length);
 
+var maxSeatNum = 10 ;           // Seats limit for sold out 
 
-/////////////////////// Constructor Function for movies  ///////////////
+/***************************** Constructor Function for movies **********************************************/
 function MoviesKind(name, moviesSelect,moviesNAME, seatLoc, seatsNum, payMethod) {
 
     this.name = name;
@@ -31,6 +32,7 @@ function MoviesKind(name, moviesSelect,moviesNAME, seatLoc, seatsNum, payMethod)
     this.seatLoc = seatLoc;
     this.seatsNum = seatsNum;
     this.payMethod = payMethod;
+    this.seatCounter = 0;
 
     MoviesKind.moviesList.push(this);
 }
@@ -55,8 +57,7 @@ function handleSubmit(event) {
     MoviesKind.moviesList.push(name);
 
     var moviesSelect = movies.moviesSelect.value;
-    console.log('moviesSelect firt select ', moviesSelect);
-
+    //console.log('moviesSelect firt select ', moviesSelect);
     MoviesKind.moviesList.push(moviesSelect);
 
     var moviesNAME = movies.moviesNAME.value;
@@ -70,29 +71,44 @@ function handleSubmit(event) {
     //console.log('seatsNum ', seatsNum);
     MoviesKind.moviesList.push(seatsNum);
 
+    // this.seatCounter = seatsNum;
+
     var payMethod = movies.payMethod.value;
     //console.log('payMethod ', payMethod);
     MoviesKind.moviesList.push(payMethod);
 
-    var loc = new MoviesKind(name, moviesSelect,moviesNAME,seatLoc, seatsNum, payMethod);
-    console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
+
+    new MoviesKind(name, moviesSelect,moviesNAME,seatLoc, seatsNum, payMethod);
+    //console.log('MoviesKind.moviesList : ', MoviesKind.moviesList);
     newArray =  MoviesKind.moviesList;
-    console.log(' newArray', newArray[2]);
+    //console.log(' newArray', newArray[2]);
 
-
-    localStorage.removeItem("movies");
+    localStorage.removeItem('movies');
     setUserData();
     getUserData(moviesNAME);
+
+    if (seatsNum >= maxSeatNum)
+    {
+        alert('Sorry , Tickets Sold Out , Choose Another Movie');
+    }else 
+    {
+        var total = maxSeatNum-this.seatsNum;
+        alert(' Left Tickets For This Movie : ' + total);
+
+    }
+   
    
 }// end of event function
 
-////////////////////////////////////////////// Drop Down list //////////////////////////////////////////////////////////
+
+
+/***************************** Drop Down list for different kinds of movies  **************************************/
 
 function romanticDRop() {
 
     //Done: Add an <option> tag inside the form's select for each product
 
-    var selectElement = document.getElementById('items');           // drop down list 
+    var selectElement = document.getElementById('items');           // drop down list location for romantic 
 
     for (var i = 0; i < romanticMo.length; i++) {
 
@@ -104,7 +120,7 @@ function romanticDRop() {
 
 
     }
-    console.log(' theOption.value ', theOption.value);
+    //console.log(' theOption.value ', theOption.value);
 
 } /// Ending of romanticDRop() function
 
@@ -112,7 +128,7 @@ function horrorDRop() {
 
     //Done: Add an <option> tag inside the form's select for each product
 
-    var selectElement = document.getElementById('items');           // drop down list 
+    var selectElement = document.getElementById('items');           // drop down list location for horror 
 
     for (var i = 0; i < horrorMo.length; i++) {
 
@@ -128,7 +144,7 @@ function comedyDRop() {
 
     //Done: Add an <option> tag inside the form's select for each product
 
-    var selectElement = document.getElementById('items');           // drop down list 
+    var selectElement = document.getElementById('items');           // drop down list location for comedy 
 
     for (var i = 0; i < comedyMo.length; i++) {
 
@@ -144,7 +160,7 @@ function actionDRop() {
 
     //Done: Add an <option> tag inside the form's select for each product
 
-    var selectElement = document.getElementById('items');           // drop down list 
+    var selectElement = document.getElementById('items');           // drop down list location for action 
 
     for (var i = 0; i < actionMo.length; i++) {
 
@@ -160,7 +176,7 @@ function dramaDRop() {
 
     //Done: Add an <option> tag inside the form's select for each product
 
-    var selectElement = document.getElementById('items');           // drop down list 
+    var selectElement = document.getElementById('items');           // drop down list location for drama 
 
     for (var i = 0; i < dramaMo.length; i++) {
 
@@ -174,30 +190,30 @@ function dramaDRop() {
 
 
 
-//////////////////////////////////////// Show up the movies types ///////////////////////////////////////////////
+/***************************** Show up the movies types **********************************************/
 
 var selectElement = document.getElementById('movieType1');
 
 function handleSelect(event) {
 
-    document.getElementById('showorhiddenRomantic').style.display = "inline";
+    document.getElementById('showorhiddenRomantic').style.display = "inline";  // Show up the text input which already hidden
     event.preventDefault();
     // get all the values from the form
     var movies = event.target;
-    console.log('movies : ', movies);
+    //console.log('movies : ', movies);
 
     var moviesSelect = movies.value;
     //console.log('moviesSelect ', moviesSelect);
 
-    if (moviesSelect === 'romantic') {
+    if (moviesSelect === 'romantic') {                  // show up the drop down list for romantic movies 
         romanticDRop();
-    } else if (moviesSelect === 'comedy') {
+    } else if (moviesSelect === 'comedy') {             // show up the drop down list for comedy movies 
         comedyDRop();
-    } else if (moviesSelect === 'action') {
+    } else if (moviesSelect === 'action') {             // show up the drop down list for action movies 
         actionDRop();
-    } else if (moviesSelect === 'horror') {
+    } else if (moviesSelect === 'horror') {             // show up the drop down list for horror movies 
         horrorDRop();
-    } else if (moviesSelect === 'drama') {
+    } else if (moviesSelect === 'drama') {              // show up the drop down list for drama movies 
         dramaDRop();
     } else {
         alert(' Please choose Movies Type ');
@@ -207,8 +223,7 @@ function handleSelect(event) {
 selectElement.addEventListener('change', handleSelect);
 
 
-
-////////////////////////////////////// User Movie Choice & Seat Counter  /////////////////////////////////////////////////////////////
+/********************************** User Movie Choice & Seat Counter  **************************************/
 
 ////////// Constructor Function for movie name ////////
 function MoviesNameSeatNum(name, src, cinemaName, Moviedate) {
@@ -217,8 +232,6 @@ function MoviesNameSeatNum(name, src, cinemaName, Moviedate) {
     this.src = src;
     this.cinemaName = cinemaName;
     this.Moviedate = Moviedate;
-
-    this.seatCounter = 0;
 
     MoviesNameSeatNum.moviesNameSeatList.push(this);
 }
@@ -256,11 +269,11 @@ new MoviesNameSeatNum('The Irishman', 'moviesNameImg/The Irishman.jpg', 'City Ci
 new MoviesNameSeatNum('IT 2', 'moviesNameImg/IT2.jpg', 'Abdali Cinema', 'At 6:00 PM');
 
 
-MoviesNameSeatNum.container = document.getElementById('movieImage');
+MoviesNameSeatNum.container = document.getElementById('movieImage');    // select the area for output 
 
 
-MoviesNameSeatNum.middleImage = document.getElementById('movie-image');
-MoviesNameSeatNum.middleTitle = document.getElementById('movie-title');
+MoviesNameSeatNum.middleImage = document.getElementById('movie-image');   // select the image location 
+MoviesNameSeatNum.middleTitle = document.getElementById('movie-title');   // select the movie name location 
 
 MoviesNameSeatNum.middleObject = null;
 
@@ -268,10 +281,10 @@ MoviesNameSeatNum.middleObject = null;
 ////////////// Add Element /////////////////
 function addElement(tag, container, text) {
 
-    var element = document.createElement(tag);
-    container.appendChild(element);
-    if (text) {
-        element.textContent = text;
+    var element = document.createElement(tag);      // determine the tag
+    container.appendChild(element);                 // append it 
+    if (text) {         
+        element.textContent = text;                 // set the content 
     }
     return element;
 
@@ -280,36 +293,38 @@ function addElement(tag, container, text) {
 
 ////////// Store movies names
 function setMoviesNames() {
-    var productStr = JSON.stringify(MoviesNameSeatNum.moviesNameSeatList);
-    localStorage.setItem('MoviesName', productStr);
+    var productStr = JSON.stringify(MoviesNameSeatNum.moviesNameSeatList);    // convert the data to it in local storage as string
+    localStorage.setItem('MoviesName', productStr);  // then store it in LS 
 } // Ending Of Updates updateMoviesNames Function
 
-///////////// Call it  /////// 
+
+///////////// Call it  ////////////////////
 setMoviesNames();
 
+/********************************** Show up the user ticket  **************************************/
 
 function getUserData(moviesNAME) {
 
-    var dataP = localStorage.getItem('MoviesName');
+    var dataP = localStorage.getItem('MoviesName');   // To get array of movies 
     var ProductData = JSON.parse(dataP);
 
-    var alloutput = document.getElementById('Movie-sentences');
+    var alloutput = document.getElementById('Movie-sentences');  // to print out the needed info 
 
-    var movieNameImg = document.getElementById('movie-image');
-    var movieNameTilte = document.getElementById('movie-title');
+    var movieNameImg = document.getElementById('movie-image');  // change the pic of movie 
+    var movieNameTilte = document.getElementById('movie-title');  // change the title of the movie
 
     movieNameImg.innerHTML = '';
     if (ProductData) {
-        console.log('Product data Name ', ProductData);
+        //console.log('Product data Name ', ProductData);
 
         for (var i = 0; i < ProductData.length; i++) {
             // console.log('Product data Name ', ProductData.length);
             var arrayIndex = ProductData[i];
-            console.log('arrayIndex : ', arrayIndex);
+            //console.log('arrayIndex : ', arrayIndex);
             var newMovie = MoviesNameSeatNum.moviesNameSeatList[i];
 
             if (arrayIndex.name === moviesNAME) {
-                console.log(' arrayIndex.name',arrayIndex.name );
+                //console.log(' arrayIndex.name',arrayIndex.name );
                 movieNameImg.setAttribute('src', arrayIndex.src);
                 movieNameTilte.textContent = arrayIndex.name;
                 addElement('li', alloutput, 'Your Name : ' + MoviesKind.moviesList[0])
@@ -323,21 +338,25 @@ function getUserData(moviesNAME) {
             }
 
         }
-        // updateMovieName(moviesSelect);
-        // setMoviesNames();
 
     } else {
 
-        alert(' nothing here ');
+        alert(' Nothing Here ');
     }
 
 } // Ending of function getUserData
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/********************************** End Of Code  **************************************/
+/********************************** End Of Code  **************************************/
+/********************************** End Of Code  **************************************/
+/********************************** End Of Code  **************************************/
+/********************************** End Of Code  **************************************/
+
+
 
 var selectElement = document.getElementById('items');
-console.log(' selectElement', selectElement);
+//console.log(' selectElement', selectElement);
 
 movieForm.addEventListener('submit', handleSubmit);
 
@@ -347,10 +366,10 @@ selectElement.addEventListener('change',
         event.preventDefault();
         // get all the values from the form
         var movies = event.target;
-        console.log('movies : ', movies);
+        //console.log('movies : ', movies);
 
         var moviesSelect = movies.value;
-        console.log('moviesSelect for movie name ', moviesSelect);
+        //console.log('moviesSelect for movie name ', moviesSelect);
 
         switch (moviesSelect) {
             case "After":
@@ -358,7 +377,6 @@ selectElement.addEventListener('change',
             case "Maleficent":
             case "Aladdin":
             case "Judy (II)":
-              
                 break;
 
             case "The Exorcist":
@@ -366,7 +384,6 @@ selectElement.addEventListener('change',
             case "Halloween":
             case "The Thing":
             case "The Fly":
-          
                 break;
 
             case "Death at a Funeral":
@@ -374,7 +391,6 @@ selectElement.addEventListener('change',
             case "The Hangover":
             case "Superbad":
             case "Project X":
-              
                 break;
 
             case "The Equalizer":
@@ -382,7 +398,6 @@ selectElement.addEventListener('change',
             case "The Avengers":
             case "Captain Marvel":
             case "Black Panther":
-                
                 break;
 
             case "Joker":
@@ -390,12 +405,8 @@ selectElement.addEventListener('change',
             case "The Lion King":
             case "The Irishman":
             case "IT 2":
-                
                 break;
-
-
         }
-
     },
     false
 );
